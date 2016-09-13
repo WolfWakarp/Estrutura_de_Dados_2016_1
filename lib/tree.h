@@ -15,10 +15,10 @@ typedef struct bt{
 bt* bst_create(int value);
 
 /* Insere na bst um valor. */
-bt* bst_insert(bt* bst, int value);
+bt* bst_insert(bt* bst, int value, int balance);
 
 /* Insere na bst um array de valores. */
-bt* bst_insert_array(bt* bst, int arr[], int size);
+bt* bst_insert_array(bt* bst, int arr[], int size, int balance);
 
 /* Busca um valor na bst e retorna o número de comparações */
 int bst_search(bt* bst, int value);
@@ -26,19 +26,36 @@ int bst_search(bt* bst, int value);
 /* Limpa a binary tree */
 void bst_free(bt* bst);
 
-/*Imprime a bst */
+/* Imprime a bst */
 void bst_print(bt* bst);
 
-/*Cria uma arvore vazia*/
+/* Cria uma arvore vazia*/
 bt* create_empty_tree();
 
-/*Compara dois inteiros e verifica o maior */
+/* Retorna se a árvore está vazia */
+int bst_is_empty(bt* bst);
+
+/* Compara dois inteiros e verifica o maior */
 int max(int a, int b);
+
+/* Altura da arvore */
+int bst_height(bt* bst);
+
+/* Fator de balanceamento */
+int bst_balance_factor(bt* bst);
+
+/* Rotacionar a arvore */
+bt* bst_rotate_left(bt* bst);
+
+bt* bst_rotate_right(bt* bst);
 
 bt* create_empty_tree(){
 	return NULL;
 }
 
+int bst_is_empty(bt* bst){
+	return (bst == NULL);
+}
 
 bt* bst_create(int value){
 	bt* bst = (bt*)malloc(sizeof(bt));
@@ -49,24 +66,68 @@ bt* bst_create(int value){
 	return bst;
 }
 
+bt* bst_rotate_left(bt* bst){
+	bt* subtree_root = create_empty_tree();
+	
+	if(!bst_is_empty(bst) && !bst_is_empty(bst->right)){
+		subtree_root = bst->right;
+		bst->right = subtree_root->left;
+		subtree_root->left = bst;
+	}
 
-bt* bst_insert(bt* bst, int value){
+	return subtree_root;	
+}
+
+bt* bst_rotate_right(bt* bst){
+	bt* subtree_root = create_empty_tree();
+	
+	if(!bst_is_empty(bst) && !bst_is_empty(bst->left)){
+		subtree_root = bst->left;
+		bst->left = subtree_root->right;
+		subtree_root->right = bst;
+	}
+
+	return subtree_root;	
+}
+
+bt* bst_insert(bt* bst, int value, int balance){
 	if(bst == NULL){
 		bst = bst_create(value);
 	}else if(bst->value > value){
-		bst->left = bst_insert(bst->left, value);
+		bst->left = bst_insert(bst->left, value, balance);
+		if(balance){
+			if(balance_factor(bst) == 2){
+				if(value < bst->left->value){
+					bst = bst_rotate_right(bst);
+				}else{
+					bst->left = bst_rotate_left(bst->left);
+					bst = bst_rotate_right(bst);
+				}
+			}		
+		}
 	}else{
-		bst->right = bst_insert(bst->right, value);
+		bst->right = bst_insert(bst->right, value, balance);
+		if(balance){
+			if(balance_factor(bst) == -2){
+				if(value > bst->right->value){
+					bst = bst_rotate_left(bst);
+				}else{
+					bst->right = bst_rotate_right(bst->right);
+					bst = bst_rotate_left(bst);			
+				}			
+				
+			}		
+		}
 	}
 	return bst;
 }
 
-bt* bst_insert_array(bt* bst, int arr[], int size){
+bt* bst_insert_array(bt* bst, int arr[], int size, int balance){
 
 	int i;
 
 	for(i = 0; i < size; i++){
-		bst = bst_insert(bst, arr[i]);
+		bst = bst_insert(bst, arr[i], balance);
 	}
 
 	return bst;
@@ -111,8 +172,7 @@ int bst_height(bt* bst){
 	}
 }
 
-bt* bst_balance(bt* avl){
-	if(){
-	}		
+int balance_factor(bt* bst){
+	return bst_height(bst->left) - bst_height(bst->right);
 }
 

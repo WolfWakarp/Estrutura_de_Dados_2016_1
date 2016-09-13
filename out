@@ -1,0 +1,2011 @@
+
+(151(121(120(105(102(101(100()(100()()))(101()()))(104(103()(103()()))(104()(104()()))))(119(108(107(106()(106()(106()(106()()))))(107()(107()(107()()))))(109(108()(108()()))(117(114(110(109()())(110()(110()(111()(111()(112()(112()())))))))(115(114()())(116()())))(117()()))))()))(120()()))(133(123(122(121()(121()()))())(126(123()(124(123()(123()()))(124()(125()()))))(126()(128(127(126()(126()(126()())))(127()(127()(127()()))))(132(130(128()(128()(128()(129()()))))(131(130()(130()()))(131()(131()(131()(131()(131()())))))))(132()(132()(132()(132()())))))))))(144(141(136(133()(134(133()())(135()(135()(135()(135()()))))))(136()(137()(138(137()(137()()))(139(138()(138()()))(139()(139()())))))))(142()(142()())))(144()(149(148(145(144()(144()()))(146(145()())(146()(146()(146()(146()(147(146()())())))))))(148()(148()())))(149()(149()(150(149()(149()()))()))))))))(261(199(188(168(156(154(153(151()(152()()))())(155()()))(157(156()(156()(156()())))(157()(157()(164(160(157()(158(157()(157()(157()())))(159(158()(158()()))(159()(159()())))))(162(160()(161(160()(160()(160()(160()()))))()))(163(162()(162()()))(163()(163()())))))(165(164()(164()()))(166(165()())(166()(167()(167()(167()(167()()))))))))))))(185(180(179(168()(174(172(168()(168()(168()(171(168()(168()(169()())))()))))(172()(173(172()())(173()()))))(175(174()(174()(174()(174()(174()())))))(178(177(175()(175()()))())(178()(178()()))))))())(180()(181(180()(180()()))(182(181()(181()(181()(181()()))))(183(182()())(183()(183()(183()(183()(184()()))))))))))(185()(186(185()(185()(185()())))(187()(187()()))))))(192(188()(190(189()())(191(190()(190()()))())))(192()(194(192()(192()()))(195(194()())(195()(196(195()(195()()))(196()(196()(197(196()())(198()())))))))))))(253(231(214(211(207(202(201(199()())())(204(202()(203(202()())()))(205(204()())(205()(206(205()(205()(205()(205()(205()())))))(206()(206()())))))))(210(208(207()())(208()(208()(208()(208()(208()(208()(209(208()())(209()())))))))))(210()())))(212(211()())(213(212()(212()(212()())))(213()(213()())))))(215(214()(214()(214()(214()()))))(221(219(215()(216(215()(215()()))(216()(216()(218(217()(217()()))(218()()))))))(220()(220()())))(224(222(221()())(222()(223(222()())())))(224()(225()(228(227()())(230(229(228()())(229()(229()(229()()))))(230()(230()()))))))))))(246(232(231()(231()(231()())))(244(239(236(234(233(232()(232()()))())(234()(234()())))(236()(237(236()())(238(237()(237()(237()())))(238()(238()(238()())))))))(239()(242(240(239()(239()(239()())))(240()(240()(241()()))))(242()()))))(244()(245(244()())(245()(245()()))))))(247(246()(246()(246()(246()(246()(246()()))))))(251(247()(250(248(247()(247()()))(249(248()())(249()())))(250()())))(252(251()(251()(251()(251()()))))(252()(252()())))))))(256(254(253()())(254()(255()(255()()))))(256()(258(257(256()())())(260(258()())()))))))(267(266(265(262(261()(261()(261()())))(264(262()(263()(263()(263()()))))(264()())))(265()(265()())))(266()(266()(266()()))))(271(269(268(267()())(268()(268()())))(270(269()())(270()(270()(270()(270()(270()())))))))(294(278(275(273(272(271()())())(273()(274(273()(273()()))())))(275()(276(275()(275()()))(277(276()())(277()())))))(287(282(280(279()(279()()))(281(280()())()))(286(282()(283(282()())(284(283()())(284()(284()(284()(284()(285()()))))))))()))(292(291(290(289(288(287()())(288()(288()())))(289()(289()())))())())(293(292()(292()(292()(292()(292()())))))(293()())))))(299(295(294()())(296(295()())(296()(297(296()(296()()))(297()(297()()))))))(299()(299()()))))))))
+
+
+
+
+
+
+
+(199(151(126(114(107(102(101(100()(100()()))(101()()))(104(103(103()())(104()()))(105(104()())(106()()))))(108(108()(108()()))()))(121(117(115(114()())(116()()))(119(117()())(120()(120()()))))(123(122(121()(121()()))(123()()))(124(123(123()())(124()()))(126(125()())())))))(136(131(128(127(126(126()())(126()()))())(130(129()())(130()(130()()))))(133(132(131()(131()()))(132()()))(134(133()(133()()))(135()()))))(144(138(137(136()())(137()(137()())))(139(138(138()())(139()()))(139()())))(148(146(145(144()(144()()))(145()()))(146(146()())(147()())))(149(148(148()())(149()()))(150(149()())()))))))(168(168(160(157(156(153(151()(152()()))(154()(155()())))(156()(156()())))(157()(158(157(157()())(157()()))(158()(159()())))))(162(160(160(160()())())(160()(161(160()())())))(163(163(162()(162()()))(163()()))(165(165()())(166(166()())(167()()))))))())(179(174(172(168(168(168()())())(168(168()())(171(169()())())))(172(172()())(173()(173()()))))(175(174()(174()()))(177(175()(175()()))())))(188(185(181(180(180()())(180()(180()())))(182(181()())(183(182()())(183()(184()())))))(186(185(185()())(185()(185()())))(187()(187()()))))(192(190(188()(189()()))(191(190()(190()()))(192()())))(195(194(192()(192()()))(195(194()())(195()())))(196(196(195()())(196()()))(197(196()())(198()())))))))))(246(222(210(205(202(201(199()())())(204(202(202()())(203()()))(205(204()())())))(208(206(205(205()())())(207(206()(206()()))(207()())))(209(208()())(209()()))))(215()(218(216(216()(216()()))(217()(217()())))(219(218()())(220(220()())(221()()))))))(237(231(228(223(222()(222()()))(225()(227()())))(229(228()())()))(234(232(231(231()())(231()()))(232()(233()())))(236(234()(234()()))(236()()))))(240(238(237(237()())(237()()))(240()(240()())))(242(242(241()())())(245(244()())(245()(245()())))))))(267(253(247(246(246(246()())())(246(246()())(246()(247()()))))(249(248(247()(247()()))(248()()))(251(250(249()())(250()()))(251()()))))(261(256(254(253()())())(258(256(256()())(257()()))(260(258()())())))(264(262()(263()()))(265(265(264()())())(265()(266()()))))))(287(278(271(268(268(267()())())(269(268()())(270()())))(275(273(272(271()())(273()()))(273(273()())(274()())))(276(276()())(277()(277()())))))(282(280(279()(279()()))(281(280()())(282()())))(284(283(282()())(283()()))(284(284(284()())(284()()))(286(285()())())))))(293(289(288(287()())(288()(288()())))(290(289()(289()()))(292()())))(296(295(294(293()())(294()()))(296(295()())()))(297(296()(296()()))(299(297()(297()()))(299()(299()()))))))))))
+Quantidade de sorteios: 500
+Sorteio: #1
+	Numero sorteado: 279
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 10
+Sorteio: #2
+	Numero sorteado: 239
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #3
+	Numero sorteado: 128
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #4
+	Numero sorteado: 174
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 10
+Sorteio: #5
+	Numero sorteado: 181
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #6
+	Numero sorteado: 229
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 14
+Sorteio: #7
+	Numero sorteado: 112
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 15
+Sorteio: #8
+	Numero sorteado: 191
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #9
+	Numero sorteado: 174
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 10
+Sorteio: #10
+	Numero sorteado: 175
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 11
+Sorteio: #11
+	Numero sorteado: 288
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 12
+Sorteio: #12
+	Numero sorteado: 261
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 2
+Sorteio: #13
+	Numero sorteado: 272
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 9
+Sorteio: #14
+	Numero sorteado: 284
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 12
+Sorteio: #15
+	Numero sorteado: 252
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #16
+	Numero sorteado: 261
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 2
+Sorteio: #17
+	Numero sorteado: 276
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #18
+	Numero sorteado: 246
+	Comparacoes na AVL: 2
+	Comparacoes na BST: 6
+Sorteio: #19
+	Numero sorteado: 230
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 13
+Sorteio: #20
+	Numero sorteado: 104
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #21
+	Numero sorteado: 146
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #22
+	Numero sorteado: 132
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #23
+	Numero sorteado: 107
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 7
+Sorteio: #24
+	Numero sorteado: 219
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #25
+	Numero sorteado: 199
+	Comparacoes na AVL: 1
+	Comparacoes na BST: 3
+Sorteio: #26
+	Numero sorteado: 124
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #27
+	Numero sorteado: 214
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 6
+Sorteio: #28
+	Numero sorteado: 108
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 6
+Sorteio: #29
+	Numero sorteado: 289
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 11
+Sorteio: #30
+	Numero sorteado: 205
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 11
+Sorteio: #31
+	Numero sorteado: 236
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #32
+	Numero sorteado: 168
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 5
+Sorteio: #33
+	Numero sorteado: 136
+	Comparacoes na AVL: 4
+	Comparacoes na BST: 6
+Sorteio: #34
+	Numero sorteado: 148
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #35
+	Numero sorteado: 131
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 10
+Sorteio: #36
+	Numero sorteado: 247
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 7
+Sorteio: #37
+	Numero sorteado: 265
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 5
+Sorteio: #38
+	Numero sorteado: 154
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 7
+Sorteio: #39
+	Numero sorteado: 146
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #40
+	Numero sorteado: 292
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #41
+	Numero sorteado: 131
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 10
+Sorteio: #42
+	Numero sorteado: 181
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #43
+	Numero sorteado: 114
+	Comparacoes na AVL: 4
+	Comparacoes na BST: 9
+Sorteio: #44
+	Numero sorteado: 156
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #45
+	Numero sorteado: 138
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 9
+Sorteio: #46
+	Numero sorteado: 156
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #47
+	Numero sorteado: 206
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 13
+Sorteio: #48
+	Numero sorteado: 148
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #49
+	Numero sorteado: 167
+	Comparacoes na AVL: 10
+	Comparacoes na BST: 14
+Sorteio: #50
+	Numero sorteado: 146
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #51
+	Numero sorteado: 207
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #52
+	Numero sorteado: 134
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #53
+	Numero sorteado: 280
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #54
+	Numero sorteado: 109
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #55
+	Numero sorteado: 215
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 7
+Sorteio: #56
+	Numero sorteado: 123
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 4
+Sorteio: #57
+	Numero sorteado: 232
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #58
+	Numero sorteado: 263
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #59
+	Numero sorteado: 277
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 10
+Sorteio: #60
+	Numero sorteado: 283
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 11
+Sorteio: #61
+	Numero sorteado: 291
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #62
+	Numero sorteado: 289
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 11
+Sorteio: #63
+	Numero sorteado: 196
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 10
+Sorteio: #64
+	Numero sorteado: 167
+	Comparacoes na AVL: 10
+	Comparacoes na BST: 14
+Sorteio: #65
+	Numero sorteado: 205
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 11
+Sorteio: #66
+	Numero sorteado: 266
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 4
+Sorteio: #67
+	Numero sorteado: 138
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 9
+Sorteio: #68
+	Numero sorteado: 126
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 5
+Sorteio: #69
+	Numero sorteado: 232
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #70
+	Numero sorteado: 242
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 11
+Sorteio: #71
+	Numero sorteado: 161
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 14
+Sorteio: #72
+	Numero sorteado: 239
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #73
+	Numero sorteado: 238
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 13
+Sorteio: #74
+	Numero sorteado: 270
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 6
+Sorteio: #75
+	Numero sorteado: 117
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 8
+Sorteio: #76
+	Numero sorteado: 183
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 11
+Sorteio: #77
+	Numero sorteado: 174
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 10
+Sorteio: #78
+	Numero sorteado: 142
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 6
+Sorteio: #79
+	Numero sorteado: 253
+	Comparacoes na AVL: 4
+	Comparacoes na BST: 4
+Sorteio: #80
+	Numero sorteado: 106
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 8
+Sorteio: #81
+	Numero sorteado: 160
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 11
+Sorteio: #82
+	Numero sorteado: 126
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 5
+Sorteio: #83
+	Numero sorteado: 177
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 13
+Sorteio: #84
+	Numero sorteado: 229
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 14
+Sorteio: #85
+	Numero sorteado: 167
+	Comparacoes na AVL: 10
+	Comparacoes na BST: 14
+Sorteio: #86
+	Numero sorteado: 166
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 12
+Sorteio: #87
+	Numero sorteado: 136
+	Comparacoes na AVL: 4
+	Comparacoes na BST: 6
+Sorteio: #88
+	Numero sorteado: 248
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 11
+Sorteio: #89
+	Numero sorteado: 192
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 5
+Sorteio: #90
+	Numero sorteado: 106
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 8
+Sorteio: #91
+	Numero sorteado: 117
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 8
+Sorteio: #92
+	Numero sorteado: 185
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 6
+Sorteio: #93
+	Numero sorteado: 152
+	Comparacoes na AVL: 10
+	Comparacoes na BST: 10
+Sorteio: #94
+	Numero sorteado: 127
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #95
+	Numero sorteado: 270
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 6
+Sorteio: #96
+	Numero sorteado: 149
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #97
+	Numero sorteado: 289
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 11
+Sorteio: #98
+	Numero sorteado: 175
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 11
+Sorteio: #99
+	Numero sorteado: 261
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 2
+Sorteio: #100
+	Numero sorteado: 186
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #101
+	Numero sorteado: 294
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 5
+Sorteio: #102
+	Numero sorteado: 195
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #103
+	Numero sorteado: 251
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #104
+	Numero sorteado: 101
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #105
+	Numero sorteado: 149
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #106
+	Numero sorteado: 188
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 4
+Sorteio: #107
+	Numero sorteado: 131
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 10
+Sorteio: #108
+	Numero sorteado: 185
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 6
+Sorteio: #109
+	Numero sorteado: 292
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #110
+	Numero sorteado: 239
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #111
+	Numero sorteado: 276
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #112
+	Numero sorteado: 192
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 5
+Sorteio: #113
+	Numero sorteado: 137
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #114
+	Numero sorteado: 296
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 8
+Sorteio: #115
+	Numero sorteado: 133
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 3
+Sorteio: #116
+	Numero sorteado: 292
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #117
+	Numero sorteado: 145
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #118
+	Numero sorteado: 205
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 11
+Sorteio: #119
+	Numero sorteado: 234
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 11
+Sorteio: #120
+	Numero sorteado: 277
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 10
+Sorteio: #121
+	Numero sorteado: 146
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #122
+	Numero sorteado: 178
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 12
+Sorteio: #123
+	Numero sorteado: 215
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 7
+Sorteio: #124
+	Numero sorteado: 224
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #125
+	Numero sorteado: 204
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #126
+	Numero sorteado: 268
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #127
+	Numero sorteado: 227
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 13
+Sorteio: #128
+	Numero sorteado: 208
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 10
+Sorteio: #129
+	Numero sorteado: 248
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 11
+Sorteio: #130
+	Numero sorteado: 106
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 8
+Sorteio: #131
+	Numero sorteado: 108
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 6
+Sorteio: #132
+	Numero sorteado: 241
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 15
+Sorteio: #133
+	Numero sorteado: 174
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 10
+Sorteio: #134
+	Numero sorteado: 208
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 10
+Sorteio: #135
+	Numero sorteado: 195
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #136
+	Numero sorteado: 273
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #137
+	Numero sorteado: 121
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 2
+Sorteio: #138
+	Numero sorteado: 135
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #139
+	Numero sorteado: 196
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 10
+Sorteio: #140
+	Numero sorteado: 120
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 3
+Sorteio: #141
+	Numero sorteado: 263
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #142
+	Numero sorteado: 130
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #143
+	Numero sorteado: 223
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 12
+Sorteio: #144
+	Numero sorteado: 198
+	Comparacoes na AVL: 10
+	Comparacoes na BST: 14
+Sorteio: #145
+	Numero sorteado: 126
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 5
+Sorteio: #146
+	Numero sorteado: 196
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 10
+Sorteio: #147
+	Numero sorteado: 292
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #148
+	Numero sorteado: 251
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #149
+	Numero sorteado: 167
+	Comparacoes na AVL: 10
+	Comparacoes na BST: 14
+Sorteio: #150
+	Numero sorteado: 139
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #151
+	Numero sorteado: 251
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #152
+	Numero sorteado: 130
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #153
+	Numero sorteado: 137
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #154
+	Numero sorteado: 159
+	Comparacoes na AVL: 10
+	Comparacoes na BST: 14
+Sorteio: #155
+	Numero sorteado: 297
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #156
+	Numero sorteado: 242
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 11
+Sorteio: #157
+	Numero sorteado: 232
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #158
+	Numero sorteado: 135
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #159
+	Numero sorteado: 266
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 4
+Sorteio: #160
+	Numero sorteado: 239
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #161
+	Numero sorteado: 262
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #162
+	Numero sorteado: 192
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 5
+Sorteio: #163
+	Numero sorteado: 253
+	Comparacoes na AVL: 4
+	Comparacoes na BST: 4
+Sorteio: #164
+	Numero sorteado: 215
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 7
+Sorteio: #165
+	Numero sorteado: 263
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #166
+	Numero sorteado: 244
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #167
+	Numero sorteado: 157
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #168
+	Numero sorteado: 131
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 10
+Sorteio: #169
+	Numero sorteado: 139
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #170
+	Numero sorteado: 254
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #171
+	Numero sorteado: 197
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 13
+Sorteio: #172
+	Numero sorteado: 210
+	Comparacoes na AVL: 4
+	Comparacoes na BST: 9
+Sorteio: #173
+	Numero sorteado: 246
+	Comparacoes na AVL: 2
+	Comparacoes na BST: 6
+Sorteio: #174
+	Numero sorteado: 213
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 9
+Sorteio: #175
+	Numero sorteado: 231
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 5
+Sorteio: #176
+	Numero sorteado: 247
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 7
+Sorteio: #177
+	Numero sorteado: 211
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 7
+Sorteio: #178
+	Numero sorteado: 135
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #179
+	Numero sorteado: 185
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 6
+Sorteio: #180
+	Numero sorteado: 217
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 15
+Sorteio: #181
+	Numero sorteado: 275
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #182
+	Numero sorteado: 239
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #183
+	Numero sorteado: 245
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #184
+	Numero sorteado: 183
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 11
+Sorteio: #185
+	Numero sorteado: 172
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 11
+Sorteio: #186
+	Numero sorteado: 153
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #187
+	Numero sorteado: 292
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #188
+	Numero sorteado: 216
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 11
+Sorteio: #189
+	Numero sorteado: 209
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 17
+Sorteio: #190
+	Numero sorteado: 103
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 7
+Sorteio: #191
+	Numero sorteado: 158
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 13
+Sorteio: #192
+	Numero sorteado: 237
+	Comparacoes na AVL: 4
+	Comparacoes na BST: 12
+Sorteio: #193
+	Numero sorteado: 114
+	Comparacoes na AVL: 4
+	Comparacoes na BST: 9
+Sorteio: #194
+	Numero sorteado: 214
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 6
+Sorteio: #195
+	Numero sorteado: 296
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 8
+Sorteio: #196
+	Numero sorteado: 295
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #197
+	Numero sorteado: 285
+	Comparacoes na AVL: 10
+	Comparacoes na BST: 17
+Sorteio: #198
+	Numero sorteado: 148
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #199
+	Numero sorteado: 128
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #200
+	Numero sorteado: 157
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #201
+	Numero sorteado: 297
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #202
+	Numero sorteado: 149
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #203
+	Numero sorteado: 230
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 13
+Sorteio: #204
+	Numero sorteado: 109
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #205
+	Numero sorteado: 160
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 11
+Sorteio: #206
+	Numero sorteado: 209
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 17
+Sorteio: #207
+	Numero sorteado: 269
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 5
+Sorteio: #208
+	Numero sorteado: 252
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #209
+	Numero sorteado: 183
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 11
+Sorteio: #210
+	Numero sorteado: 180
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 7
+Sorteio: #211
+	Numero sorteado: 222
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 10
+Sorteio: #212
+	Numero sorteado: 181
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #213
+	Numero sorteado: 234
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 11
+Sorteio: #214
+	Numero sorteado: 160
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 11
+Sorteio: #215
+	Numero sorteado: 275
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #216
+	Numero sorteado: 296
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 8
+Sorteio: #217
+	Numero sorteado: 208
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 10
+Sorteio: #218
+	Numero sorteado: 132
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #219
+	Numero sorteado: 182
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 10
+Sorteio: #220
+	Numero sorteado: 192
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 5
+Sorteio: #221
+	Numero sorteado: 208
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 10
+Sorteio: #222
+	Numero sorteado: 180
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 7
+Sorteio: #223
+	Numero sorteado: 112
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 15
+Sorteio: #224
+	Numero sorteado: 169
+	Comparacoes na AVL: 10
+	Comparacoes na BST: 18
+Sorteio: #225
+	Numero sorteado: 260
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #226
+	Numero sorteado: 264
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #227
+	Numero sorteado: 110
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 10
+Sorteio: #228
+	Numero sorteado: 163
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 13
+Sorteio: #229
+	Numero sorteado: 234
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 11
+Sorteio: #230
+	Numero sorteado: 157
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #231
+	Numero sorteado: 187
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #232
+	Numero sorteado: 144
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 4
+Sorteio: #233
+	Numero sorteado: 160
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 11
+Sorteio: #234
+	Numero sorteado: 181
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #235
+	Numero sorteado: 194
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 7
+Sorteio: #236
+	Numero sorteado: 233
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 12
+Sorteio: #237
+	Numero sorteado: 284
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 12
+Sorteio: #238
+	Numero sorteado: 246
+	Comparacoes na AVL: 2
+	Comparacoes na BST: 6
+Sorteio: #239
+	Numero sorteado: 202
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 9
+Sorteio: #240
+	Numero sorteado: 205
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 11
+Sorteio: #241
+	Numero sorteado: 132
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #242
+	Numero sorteado: 299
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 6
+Sorteio: #243
+	Numero sorteado: 212
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 8
+Sorteio: #244
+	Numero sorteado: 225
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 11
+Sorteio: #245
+	Numero sorteado: 126
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 5
+Sorteio: #246
+	Numero sorteado: 206
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 13
+Sorteio: #247
+	Numero sorteado: 121
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 2
+Sorteio: #248
+	Numero sorteado: 199
+	Comparacoes na AVL: 1
+	Comparacoes na BST: 3
+Sorteio: #249
+	Numero sorteado: 293
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 9
+Sorteio: #250
+	Numero sorteado: 284
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 12
+Sorteio: #251
+	Numero sorteado: 266
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 4
+Sorteio: #252
+	Numero sorteado: 251
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #253
+	Numero sorteado: 220
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 10
+Sorteio: #254
+	Numero sorteado: 237
+	Comparacoes na AVL: 4
+	Comparacoes na BST: 12
+Sorteio: #255
+	Numero sorteado: 214
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 6
+Sorteio: #256
+	Numero sorteado: 237
+	Comparacoes na AVL: 4
+	Comparacoes na BST: 12
+Sorteio: #257
+	Numero sorteado: 138
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 9
+Sorteio: #258
+	Numero sorteado: 163
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 13
+Sorteio: #259
+	Numero sorteado: 122
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 5
+Sorteio: #260
+	Numero sorteado: 188
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 4
+Sorteio: #261
+	Numero sorteado: 265
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 5
+Sorteio: #262
+	Numero sorteado: 196
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 10
+Sorteio: #263
+	Numero sorteado: 120
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 3
+Sorteio: #264
+	Numero sorteado: 299
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 6
+Sorteio: #265
+	Numero sorteado: 202
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 9
+Sorteio: #266
+	Numero sorteado: 144
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 4
+Sorteio: #267
+	Numero sorteado: 283
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 11
+Sorteio: #268
+	Numero sorteado: 155
+	Comparacoes na AVL: 10
+	Comparacoes na BST: 8
+Sorteio: #269
+	Numero sorteado: 258
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #270
+	Numero sorteado: 279
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 10
+Sorteio: #271
+	Numero sorteado: 141
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 5
+Sorteio: #272
+	Numero sorteado: 164
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 10
+Sorteio: #273
+	Numero sorteado: 284
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 12
+Sorteio: #274
+	Numero sorteado: 173
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 13
+Sorteio: #275
+	Numero sorteado: 201
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #276
+	Numero sorteado: 273
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #277
+	Numero sorteado: 275
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #278
+	Numero sorteado: 181
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #279
+	Numero sorteado: 265
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 5
+Sorteio: #280
+	Numero sorteado: 125
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 9
+Sorteio: #281
+	Numero sorteado: 102
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 5
+Sorteio: #282
+	Numero sorteado: 147
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 14
+Sorteio: #283
+	Numero sorteado: 115
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #284
+	Numero sorteado: 273
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #285
+	Numero sorteado: 173
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 13
+Sorteio: #286
+	Numero sorteado: 107
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 7
+Sorteio: #287
+	Numero sorteado: 128
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #288
+	Numero sorteado: 168
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 5
+Sorteio: #289
+	Numero sorteado: 266
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 4
+Sorteio: #290
+	Numero sorteado: 216
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 11
+Sorteio: #291
+	Numero sorteado: 185
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 6
+Sorteio: #292
+	Numero sorteado: 127
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #293
+	Numero sorteado: 205
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 11
+Sorteio: #294
+	Numero sorteado: 267
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 3
+Sorteio: #295
+	Numero sorteado: 278
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 6
+Sorteio: #296
+	Numero sorteado: 180
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 7
+Sorteio: #297
+	Numero sorteado: 105
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 4
+Sorteio: #298
+	Numero sorteado: 249
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 12
+Sorteio: #299
+	Numero sorteado: 162
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 12
+Sorteio: #300
+	Numero sorteado: 168
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 5
+Sorteio: #301
+	Numero sorteado: 238
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 13
+Sorteio: #302
+	Numero sorteado: 123
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 4
+Sorteio: #303
+	Numero sorteado: 299
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 6
+Sorteio: #304
+	Numero sorteado: 237
+	Comparacoes na AVL: 4
+	Comparacoes na BST: 12
+Sorteio: #305
+	Numero sorteado: 184
+	Comparacoes na AVL: 11
+	Comparacoes na BST: 16
+Sorteio: #306
+	Numero sorteado: 282
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 8
+Sorteio: #307
+	Numero sorteado: 157
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #308
+	Numero sorteado: 212
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 8
+Sorteio: #309
+	Numero sorteado: 135
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #310
+	Numero sorteado: 127
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #311
+	Numero sorteado: 229
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 14
+Sorteio: #312
+	Numero sorteado: 247
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 7
+Sorteio: #313
+	Numero sorteado: 159
+	Comparacoes na AVL: 10
+	Comparacoes na BST: 14
+Sorteio: #314
+	Numero sorteado: 281
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 10
+Sorteio: #315
+	Numero sorteado: 280
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #316
+	Numero sorteado: 240
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 12
+Sorteio: #317
+	Numero sorteado: 255
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #318
+	Numero sorteado: 221
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 8
+Sorteio: #319
+	Numero sorteado: 108
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 6
+Sorteio: #320
+	Numero sorteado: 133
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 3
+Sorteio: #321
+	Numero sorteado: 270
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 6
+Sorteio: #322
+	Numero sorteado: 202
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 9
+Sorteio: #323
+	Numero sorteado: 222
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 10
+Sorteio: #324
+	Numero sorteado: 132
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #325
+	Numero sorteado: 270
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 6
+Sorteio: #326
+	Numero sorteado: 157
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #327
+	Numero sorteado: 207
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #328
+	Numero sorteado: 208
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 10
+Sorteio: #329
+	Numero sorteado: 215
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 7
+Sorteio: #330
+	Numero sorteado: 163
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 13
+Sorteio: #331
+	Numero sorteado: 257
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 8
+Sorteio: #332
+	Numero sorteado: 156
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #333
+	Numero sorteado: 164
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 10
+Sorteio: #334
+	Numero sorteado: 166
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 12
+Sorteio: #335
+	Numero sorteado: 126
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 5
+Sorteio: #336
+	Numero sorteado: 183
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 11
+Sorteio: #337
+	Numero sorteado: 145
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #338
+	Numero sorteado: 250
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 10
+Sorteio: #339
+	Numero sorteado: 213
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 9
+Sorteio: #340
+	Numero sorteado: 221
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 8
+Sorteio: #341
+	Numero sorteado: 290
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #342
+	Numero sorteado: 187
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #343
+	Numero sorteado: 224
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #344
+	Numero sorteado: 261
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 2
+Sorteio: #345
+	Numero sorteado: 172
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 11
+Sorteio: #346
+	Numero sorteado: 189
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 8
+Sorteio: #347
+	Numero sorteado: 119
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 5
+Sorteio: #348
+	Numero sorteado: 142
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 6
+Sorteio: #349
+	Numero sorteado: 144
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 4
+Sorteio: #350
+	Numero sorteado: 171
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 15
+Sorteio: #351
+	Numero sorteado: 160
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 11
+Sorteio: #352
+	Numero sorteado: 124
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #353
+	Numero sorteado: 282
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 8
+Sorteio: #354
+	Numero sorteado: 211
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 7
+Sorteio: #355
+	Numero sorteado: 174
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 10
+Sorteio: #356
+	Numero sorteado: 262
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #357
+	Numero sorteado: 123
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 4
+Sorteio: #358
+	Numero sorteado: 256
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 5
+Sorteio: #359
+	Numero sorteado: 168
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 5
+Sorteio: #360
+	Numero sorteado: 269
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 5
+Sorteio: #361
+	Numero sorteado: 165
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 11
+Sorteio: #362
+	Numero sorteado: 204
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #363
+	Numero sorteado: 146
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #364
+	Numero sorteado: 101
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #365
+	Numero sorteado: 158
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 13
+Sorteio: #366
+	Numero sorteado: 165
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 11
+Sorteio: #367
+	Numero sorteado: 206
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 13
+Sorteio: #368
+	Numero sorteado: 288
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 12
+Sorteio: #369
+	Numero sorteado: 178
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 12
+Sorteio: #370
+	Numero sorteado: 258
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #371
+	Numero sorteado: 250
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 10
+Sorteio: #372
+	Numero sorteado: 149
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #373
+	Numero sorteado: 264
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #374
+	Numero sorteado: 131
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 10
+Sorteio: #375
+	Numero sorteado: 284
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 12
+Sorteio: #376
+	Numero sorteado: 178
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 12
+Sorteio: #377
+	Numero sorteado: 195
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #378
+	Numero sorteado: 144
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 4
+Sorteio: #379
+	Numero sorteado: 190
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #380
+	Numero sorteado: 245
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #381
+	Numero sorteado: 175
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 11
+Sorteio: #382
+	Numero sorteado: 236
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #383
+	Numero sorteado: 128
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #384
+	Numero sorteado: 247
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 7
+Sorteio: #385
+	Numero sorteado: 116
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 11
+Sorteio: #386
+	Numero sorteado: 218
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 14
+Sorteio: #387
+	Numero sorteado: 208
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 10
+Sorteio: #388
+	Numero sorteado: 164
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 10
+Sorteio: #389
+	Numero sorteado: 236
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #390
+	Numero sorteado: 246
+	Comparacoes na AVL: 2
+	Comparacoes na BST: 6
+Sorteio: #391
+	Numero sorteado: 256
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 5
+Sorteio: #392
+	Numero sorteado: 229
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 14
+Sorteio: #393
+	Numero sorteado: 190
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #394
+	Numero sorteado: 230
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 13
+Sorteio: #395
+	Numero sorteado: 255
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #396
+	Numero sorteado: 240
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 12
+Sorteio: #397
+	Numero sorteado: 294
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 5
+Sorteio: #398
+	Numero sorteado: 218
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 14
+Sorteio: #399
+	Numero sorteado: 111
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 13
+Sorteio: #400
+	Numero sorteado: 157
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #401
+	Numero sorteado: 107
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 7
+Sorteio: #402
+	Numero sorteado: 244
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #403
+	Numero sorteado: 132
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #404
+	Numero sorteado: 212
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 8
+Sorteio: #405
+	Numero sorteado: 231
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 5
+Sorteio: #406
+	Numero sorteado: 110
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 10
+Sorteio: #407
+	Numero sorteado: 274
+	Comparacoes na AVL: 10
+	Comparacoes na BST: 10
+Sorteio: #408
+	Numero sorteado: 213
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 9
+Sorteio: #409
+	Numero sorteado: 288
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 12
+Sorteio: #410
+	Numero sorteado: 185
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 6
+Sorteio: #411
+	Numero sorteado: 245
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #412
+	Numero sorteado: 246
+	Comparacoes na AVL: 2
+	Comparacoes na BST: 6
+Sorteio: #413
+	Numero sorteado: 252
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #414
+	Numero sorteado: 220
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 10
+Sorteio: #415
+	Numero sorteado: 110
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 10
+Sorteio: #416
+	Numero sorteado: 103
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 7
+Sorteio: #417
+	Numero sorteado: 104
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #418
+	Numero sorteado: 146
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #419
+	Numero sorteado: 157
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 7
+Sorteio: #420
+	Numero sorteado: 208
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 10
+Sorteio: #421
+	Numero sorteado: 238
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 13
+Sorteio: #422
+	Numero sorteado: 131
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 10
+Sorteio: #423
+	Numero sorteado: 100
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 7
+Sorteio: #424
+	Numero sorteado: 231
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 5
+Sorteio: #425
+	Numero sorteado: 275
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #426
+	Numero sorteado: 159
+	Comparacoes na AVL: 10
+	Comparacoes na BST: 14
+Sorteio: #427
+	Numero sorteado: 292
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #428
+	Numero sorteado: 162
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 12
+Sorteio: #429
+	Numero sorteado: 172
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 11
+Sorteio: #430
+	Numero sorteado: 123
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 4
+Sorteio: #431
+	Numero sorteado: 174
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 10
+Sorteio: #432
+	Numero sorteado: 293
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 9
+Sorteio: #433
+	Numero sorteado: 231
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 5
+Sorteio: #434
+	Numero sorteado: 183
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 11
+Sorteio: #435
+	Numero sorteado: 228
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 12
+Sorteio: #436
+	Numero sorteado: 203
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 12
+Sorteio: #437
+	Numero sorteado: 205
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 11
+Sorteio: #438
+	Numero sorteado: 151
+	Comparacoes na AVL: 2
+	Comparacoes na BST: 1
+Sorteio: #439
+	Numero sorteado: 106
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 8
+Sorteio: #440
+	Numero sorteado: 287
+	Comparacoes na AVL: 4
+	Comparacoes na BST: 7
+Sorteio: #441
+	Numero sorteado: 214
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 6
+Sorteio: #442
+	Numero sorteado: 205
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 11
+Sorteio: #443
+	Numero sorteado: 296
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 8
+Sorteio: #444
+	Numero sorteado: 217
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 15
+Sorteio: #445
+	Numero sorteado: 100
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 7
+Sorteio: #446
+	Numero sorteado: 182
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 10
+Sorteio: #447
+	Numero sorteado: 151
+	Comparacoes na AVL: 2
+	Comparacoes na BST: 1
+Sorteio: #448
+	Numero sorteado: 158
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 13
+Sorteio: #449
+	Numero sorteado: 194
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 7
+Sorteio: #450
+	Numero sorteado: 271
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 4
+Sorteio: #451
+	Numero sorteado: 256
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 5
+Sorteio: #452
+	Numero sorteado: 195
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #453
+	Numero sorteado: 190
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #454
+	Numero sorteado: 168
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 5
+Sorteio: #455
+	Numero sorteado: 222
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 10
+Sorteio: #456
+	Numero sorteado: 127
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #457
+	Numero sorteado: 268
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #458
+	Numero sorteado: 168
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 5
+Sorteio: #459
+	Numero sorteado: 214
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 6
+Sorteio: #460
+	Numero sorteado: 238
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 13
+Sorteio: #461
+	Numero sorteado: 271
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 4
+Sorteio: #462
+	Numero sorteado: 240
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 12
+Sorteio: #463
+	Numero sorteado: 254
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #464
+	Numero sorteado: 297
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #465
+	Numero sorteado: 267
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 3
+Sorteio: #466
+	Numero sorteado: 246
+	Comparacoes na AVL: 2
+	Comparacoes na BST: 6
+Sorteio: #467
+	Numero sorteado: 107
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 7
+Sorteio: #468
+	Numero sorteado: 287
+	Comparacoes na AVL: 4
+	Comparacoes na BST: 7
+Sorteio: #469
+	Numero sorteado: 168
+	Comparacoes na AVL: 3
+	Comparacoes na BST: 5
+Sorteio: #470
+	Numero sorteado: 139
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 10
+Sorteio: #471
+	Numero sorteado: 180
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 7
+Sorteio: #472
+	Numero sorteado: 273
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #473
+	Numero sorteado: 150
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 9
+Sorteio: #474
+	Numero sorteado: 282
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 8
+Sorteio: #475
+	Numero sorteado: 208
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 10
+Sorteio: #476
+	Numero sorteado: 286
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 9
+Sorteio: #477
+	Numero sorteado: 179
+	Comparacoes na AVL: 4
+	Comparacoes na BST: 8
+Sorteio: #478
+	Numero sorteado: 244
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 8
+Sorteio: #479
+	Numero sorteado: 129
+	Comparacoes na AVL: 8
+	Comparacoes na BST: 13
+Sorteio: #480
+	Numero sorteado: 121
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 2
+Sorteio: #481
+	Numero sorteado: 249
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 12
+Sorteio: #482
+	Numero sorteado: 104
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #483
+	Numero sorteado: 162
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 12
+Sorteio: #484
+	Numero sorteado: 160
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 11
+Sorteio: #485
+	Numero sorteado: 111
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 13
+Sorteio: #486
+	Numero sorteado: 270
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 6
+Sorteio: #487
+	Numero sorteado: 156
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #488
+	Numero sorteado: 228
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 12
+Sorteio: #489
+	Numero sorteado: 251
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #490
+	Numero sorteado: 212
+	Comparacoes na AVL: 5
+	Comparacoes na BST: 8
+Sorteio: #491
+	Numero sorteado: 130
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 9
+Sorteio: #492
+	Numero sorteado: 268
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #493
+	Numero sorteado: 210
+	Comparacoes na AVL: 4
+	Comparacoes na BST: 9
+Sorteio: #494
+	Numero sorteado: 216
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 11
+Sorteio: #495
+	Numero sorteado: 295
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 7
+Sorteio: #496
+	Numero sorteado: 149
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 6
+Sorteio: #497
+	Numero sorteado: 133
+	Comparacoes na AVL: 6
+	Comparacoes na BST: 3
+Sorteio: #498
+	Numero sorteado: 137
+	Comparacoes na AVL: 7
+	Comparacoes na BST: 8
+Sorteio: #499
+	Numero sorteado: 246
+	Comparacoes na AVL: 2
+	Comparacoes na BST: 6
+Sorteio: #500
+	Numero sorteado: 270
+	Comparacoes na AVL: 9
+	Comparacoes na BST: 6

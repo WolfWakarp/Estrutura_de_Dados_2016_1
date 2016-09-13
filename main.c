@@ -46,10 +46,13 @@ int main(int argc, char *argv[]){
 
 	random_arr_numbers(arr, size, min, max);
 
-	bst = bst_insert_array(bst, arr, size);
-	avl = bst_insert_array(avl, arr, size);
+	bst = bst_insert_array(bst, arr, size, 0);
+	avl = bst_insert_array(avl, arr, size, 1);
 	printf("\n");
 	bst_print(bst);
+	
+	printf("\n\n\n\n\n\n\n\n");
+
 	bst_print(avl);
 	printf("\nQuantidade de sorteios: %d\n", n_st);
 	

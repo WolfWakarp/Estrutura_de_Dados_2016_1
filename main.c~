@@ -35,7 +35,7 @@ int main(int argc, char *argv[]){
 		min = atoi(argv[3]);
 	} 
 
-	if(argc >= 4){
+	if(argc > 4){
 		max = atoi(argv[4]);
 	}
 
@@ -46,8 +46,8 @@ int main(int argc, char *argv[]){
 
 	random_arr_numbers(arr, size, min, max);
 
-	bst = bst_insert_array(bst, arr, size);
-	avl = bst_insert_array(avl, arr, size);
+	bst = bst_insert_array(bst, arr, size, 0);
+	avl = bst_insert_array(avl, arr, size, 1);
 	printf("\n");
 	bst_print(bst);
 	bst_print(avl);
