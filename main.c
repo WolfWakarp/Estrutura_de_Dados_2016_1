@@ -17,6 +17,7 @@ int main(){
 		}
 	}
 
+	//ÁRVORE DE HUFFMAN
 	huffman_tree = convert_list_to_tree(p_queue);
 
 	printPriorityQueue(p_queue);
@@ -26,6 +27,6 @@ int main(){
 	DEBUG printf("Pre Order:\n");
 	DEBUG printPreOrder(huffman_tree);
 
-	printf("\nEnd of running.");
+	DEBUG printf("\nEnd of running.");
 	return 0;
 }
