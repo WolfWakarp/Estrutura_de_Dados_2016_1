@@ -90,33 +90,33 @@ bt* bst_rotate_right(bt* bst){
 	return subtree_root;	
 }
 
+bt* bst_balance(bt* bst){
+	if(balance_factor(bst) == 2){
+			if(balance_factor(bst->left) == -1){
+				bst->left = bst_rotate_left(bst->left);
+			}
+			bst = bst_rotate_right(bst);
+	}else if(balance_factor(bst) == -2){
+			if(balance_factor(bst->right) == 1){
+				bst->right = bst_rotate_right(bst->right);
+			}
+			bst = bst_rotate_left(bst);		
+	}		
+	return bst;
+}
+
 bt* bst_insert(bt* bst, int value, int balance){
 	if(bst == NULL){
 		bst = bst_create(value);
 	}else if(bst->value > value){
 		bst->left = bst_insert(bst->left, value, balance);
 		if(balance){
-			if(balance_factor(bst) == 2){
-				if(value < bst->left->value){
-					bst = bst_rotate_right(bst);
-				}else{
-					bst->left = bst_rotate_left(bst->left);
-					bst = bst_rotate_right(bst);
-				}
-			}		
+			bst = bst_balance(bst);
 		}
 	}else{
 		bst->right = bst_insert(bst->right, value, balance);
 		if(balance){
-			if(balance_factor(bst) == -2){
-				if(value > bst->right->value){
-					bst = bst_rotate_left(bst);
-				}else{
-					bst->right = bst_rotate_right(bst->right);
-					bst = bst_rotate_left(bst);			
-				}			
-				
-			}		
+			bst = bst_balance(bst);
 		}
 	}
 	return bst;
