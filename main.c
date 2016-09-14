@@ -55,9 +55,11 @@ int main(int argc, char *argv[]){
 	printf("\n\n\n\n\n");
 
 	bst_print(avl);
-	
+	char s[700];
+	int pos = bst_to_string(bst, s, 0);
+	s[pos+1] = '\0';
 	printf("\nQuantidade de sorteios: %d\n", n_st);
-	
+	printf("%s\n", s);
 	int num, qt_numbers = size-1;
 	
 	for(i = 0; i < n_st; i++){
