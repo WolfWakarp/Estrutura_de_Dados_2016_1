@@ -1,23 +1,30 @@
-#include "priorityQueue.h"
+#include "encodingTree.h"
 
 int main(){
 
-	countRep("arquivo.txt");
-	printFrequency(FreqCounter);
+	countRep("teste.txt");
+	DEBUG printFrequency(FreqCounter);
 
 	Node* p_queue = createPriorityQueue();
+	Node* huffman_tree = create_empty_tree();
 
 	int i;
 	for(i = 0; i < 256; i++){
 		if(FreqCounter[i] > 0) {
 			p_queue = insert(p_queue, i, FreqCounter[i]);
-			printf("Fila: ");
-			printPriorityQueue(p_queue);
+			DEBUG printf("Fila: ");
+			DEBUG printPriorityQueue(p_queue);
 		}
 	}
 
-	//printf("Priority Queue:\n");
-	//printPriorityQueue(p_queue);
+	huffman_tree = convert_list_to_tree(p_queue);
+
+	printPriorityQueue(p_queue);
+
+	DEBUG printf("\n");
+	DEBUG printf("%d\n\n\n", huffman_tree->m_frequency);
+	DEBUG printf("Pre Order:\n");
+	DEBUG printPreOrder(huffman_tree);
 
 	printf("\nEnd of running.");
 	return 0;
