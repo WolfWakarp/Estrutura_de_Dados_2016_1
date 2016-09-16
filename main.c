@@ -39,11 +39,11 @@ int main(int argc, char *argv[]){
 	}
 
 	if(argc > 4){
-		min = atoi(argv[3]);
+		min = atoi(argv[4]);
 	} 
 
 	if(argc > 5){
-		max = atoi(argv[4]);
+		max = atoi(argv[5]);
 	}
 
 	if(min > max){
