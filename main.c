@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[]){
 
-	if(argc < 3){
+	if(argc < 4){
 		printf("uso: %s tamanho quantidade_sorteios [s]equencial|[r]andomico [min max]\n", argv[0]);
 		exit(1);
 	}
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]){
 	printf("%c\n", option);
 	if(option != 's' && option != 'r'){
 		printf("erro: deve ser informado o tipo de geracao [s ou r]\n");
-		exit(0);
+		exit(1);
 	}
 
 	if(argc > 4){
@@ -92,6 +92,6 @@ int main(int argc, char *argv[]){
 
 	bst_free(bst);
 	bst_free(avl);
-	
+
 	return 0;
 }
