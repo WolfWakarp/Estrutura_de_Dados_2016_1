@@ -22,7 +22,7 @@ int main(int argc, char *argv[]){
 	srand (time(NULL));
 
 	int i;
-	int min = 0, max = INT_MAX, n_st = atoi(argv[2]);
+	int min = 100, max = 99999, n_st = atoi(argv[2]);
 	int size = atoi(argv[1]);
 	int arr[size];
 
@@ -73,18 +73,20 @@ int main(int argc, char *argv[]){
 		if(qt_numbers != 0)
 			num = random_number(0, qt_numbers);
 
-		swap(&arr[num], &arr[qt_numbers]);
+		int aux = arr[num];
+		arr[num] = arr[qt_numbers];
+		arr[qt_numbers] = aux;
 
 		comp_avl[i] = bst_search(avl, arr[qt_numbers]);
 		comp_bst[i] = bst_search(bst, arr[qt_numbers]);
-		
+
 		qt_numbers--;
 	}
-		
-	bubble(comp_bst, size);
-	bubble(comp_avl, size);
 
-	if(write_r_file(comp_bst, comp_avl, size)){
+	bubble(comp_avl, n_st);
+	bubble(comp_bst, n_st);
+
+	if(write_r_file(comp_bst, comp_avl, n_st)){
 		printf("arquivo gerado com sucesso\n");
 	}else{
 		printf("falha ao gerar arquivo\n");

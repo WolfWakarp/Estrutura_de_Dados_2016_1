@@ -4,7 +4,7 @@ int random_number(int min, int max);
 void random_arr_numbers(int arr[], int size, int min, int max);
 
 int random_number(int min, int max){
-	return min + rand()%max;
+	return  ((rand()%(max-min+1))+min);
 }
 
 void sequence_arr_numbers(int arr[], int size){

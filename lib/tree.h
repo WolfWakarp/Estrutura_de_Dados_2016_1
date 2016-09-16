@@ -137,10 +137,10 @@ bt* bst_insert_array(bt* bst, int arr[], int size, int balance){
 int bst_search(bt* bst, int value){
 
 	if(bst == NULL) return 0;
-	if(bst->value > value) return 1 + bst_search(bst->left, value);
-	if(bst->value < value) return 1 + bst_search(bst->right, value);
+	if(bst->value == value) return 1;
+	if(bst->value < value) return ((bst_search(bst->right, value)) + 1);
 
-	return 1;
+	return ((bst_search(bst->left, value)) + 1);
 }
 
 void bst_free(bt* bst){
