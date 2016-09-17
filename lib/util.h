@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <errno.h>
+#include <string.h>
 
 /* simples bubble sort para ordenar os arrays */
 void bubble(int arr[], int size);
 
 /* função para escrever o arquivo R; utiliza o template como base */
-int write_r_file(int comp_bst[], int comp_avl[], int size);
+int write_r_file(int comp_bst[], int comp_avl[], int size, char* filename);
 
 
 void bubble(int arr[], int size){
@@ -20,16 +22,24 @@ void bubble(int arr[], int size){
 	}
 }
 
-int write_r_file(int comp_bst[], int comp_avl[], int size){
+int write_r_file(int comp_bst[], int comp_avl[], int size, char* filename){
 	int i;
 	FILE *template, *dest;
 
 	template = fopen("gen_template_r", "r");
 
-	dest = fopen("avl_vs_bst.R", "w+a");
+	dest = fopen(filename, "w+a");
+	
+	
 
-	if(template == NULL) return 0;
-	if(dest == NULL) return 0;
+	if(template == NULL){
+		printf("%s\n", strerror(errno));	
+		return 0;
+	}
+	if(dest == NULL){ 
+		printf("%s\n", strerror(errno));	
+		return 0;
+	}
 
 	fprintf(dest, "bst<-c(");
 	for(i = 0; i < size; i++){
@@ -50,11 +60,10 @@ int write_r_file(int comp_bst[], int comp_avl[], int size){
 	while((byte = fgetc(template)) != EOF){
 		fwrite(&byte, sizeof(char), 1, dest);
 	}
-
+	
 	fclose(template);
 	fclose(dest);
-
-	if (ferror(template)) return 0;
+	printf("%s\n", strerror(errno));
 	return 1;
 }
 	

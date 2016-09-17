@@ -8,6 +8,7 @@
 #include "lib/util.h"
 
 #define DEBUG 0
+#define DEFAULT_FILENAME "avl_vs_bst.R"
 
 int main(int argc, char *argv[]){
 
@@ -22,17 +23,28 @@ int main(int argc, char *argv[]){
 	srand (time(NULL));
 
 	int i;
-	int min = 100, max = 99999, n_st = atoi(argv[2]);
+	int min = 1, max = 99999, n_st = atoi(argv[2]);
 	int size = atoi(argv[1]);
-	int arr[size];
+	
+	if(size <= 0 || size >= INT_MAX){
+		printf("erro: quantidade de numeros abaixo/acima do permitido\n");
+		exit(1);
+	}	
+	
+	if(n_st <= 0){
+		printf("erro: necessario pelo menos um sorteio\n");
+		exit(1);	
+	}
 
+	int arr[size];
+	
 	if(n_st > size){
 		printf("erro: quantidade de sorteios nao pode ser maior que o tamanho\n");
 		exit(1);
 	}
 
 	char option = *argv[3];
-	printf("%c\n", option);
+
 	if(option != 's' && option != 'r'){
 		printf("erro: deve ser informado o tipo de geracao [s ou r]\n");
 		exit(1);
@@ -60,8 +72,8 @@ int main(int argc, char *argv[]){
 	bst = bst_insert_array(bst, arr, size, 0);
 	avl = bst_insert_array(avl, arr, size, 1);
 
-	if(DEBUG) bst_print(avl);
-	if(DEBUG) bst_print(bst);
+	if(DEBUG){ bst_print(avl); printf("\n"); }
+	if(DEBUG){ bst_print(bst); printf("\n");}
 
 	int num, qt_numbers = size-1;
 	int comp_bst[n_st];
@@ -80,13 +92,19 @@ int main(int argc, char *argv[]){
 		comp_avl[i] = bst_search(avl, arr[qt_numbers]);
 		comp_bst[i] = bst_search(bst, arr[qt_numbers]);
 
+		if(DEBUG){
+			printf("Numero sorteado: %d\n", arr[qt_numbers]);
+			printf("Comparacoes na AVL: %d\n", comp_avl[i]);
+			printf("Comparacoes na BST: %d\n", comp_bst[i]);
+		}
+
 		qt_numbers--;
 	}
 
 	bubble(comp_avl, n_st);
 	bubble(comp_bst, n_st);
 
-	if(write_r_file(comp_bst, comp_avl, n_st)){
+	if(write_r_file(comp_bst, comp_avl, n_st, DEFAULT_FILENAME)){
 		printf("arquivo gerado com sucesso\n");
 	}else{
 		printf("falha ao gerar arquivo\n");
