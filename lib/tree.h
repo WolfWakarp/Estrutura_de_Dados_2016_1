@@ -92,12 +92,13 @@ bt* bst_rotate_right(bt* bst){
 }
 
 bt* bst_balance(bt* bst){
-	if(balance_factor(bst) == 2){
+	int bf = balance_factor(bst);
+	if(bf == 2){
 			if(balance_factor(bst->left) == -1){
 				bst->left = bst_rotate_left(bst->left);
 			}
 			bst = bst_rotate_right(bst);
-	}else if(balance_factor(bst) == -2){
+	}else if(bf == -2){
 			if(balance_factor(bst->right) == 1){
 				bst->right = bst_rotate_right(bst->right);
 			}

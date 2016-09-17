@@ -10,6 +10,12 @@
 #define DEBUG 0
 #define DEFAULT_FILENAME "avl_vs_bst.R"
 
+/* função para usar no qsort */
+int compare (const void * a, const void * b)
+{
+  return ( *(int*)a - *(int*)b );
+}
+
 int main(int argc, char *argv[]){
 
 	if(argc < 4){
@@ -63,17 +69,21 @@ int main(int argc, char *argv[]){
 		exit(1);
 	}
 
-	if(option == 'r'){
-		random_arr_numbers(arr, size, min, max);
-	}else if(option == 's'){
-		sequence_arr_numbers(arr, size);
+	int sorted;
+
+	for(i = 0; i < size; i++){
+		if(option == 'r'){
+			sorted = random_number(min, max);
+			arr[i] = sorted;
+		}else{
+			sorted = i;
+		}
+		bst = bst_insert(bst, sorted, 0);
+		avl = bst_insert(avl, sorted, 1);
 	}
 
-	bst = bst_insert_array(bst, arr, size, 0);
-	avl = bst_insert_array(avl, arr, size, 1);
-
 	if(DEBUG){ bst_print(avl); printf("\n"); }
-	if(DEBUG){ bst_print(bst); printf("\n");}
+	if(DEBUG){ bst_print(bst); printf("\n"); }
 
 	int num, qt_numbers = size-1;
 	int comp_bst[n_st];
@@ -101,9 +111,9 @@ int main(int argc, char *argv[]){
 		qt_numbers--;
 	}
 
-	bubble(comp_avl, n_st);
-	bubble(comp_bst, n_st);
-
+	qsort (comp_avl, n_st, sizeof(int), compare);
+	qsort (comp_bst, n_st, sizeof(int), compare);
+	
 	if(write_r_file(comp_bst, comp_avl, n_st, DEFAULT_FILENAME)){
 		printf("arquivo gerado com sucesso\n");
 	}else{
