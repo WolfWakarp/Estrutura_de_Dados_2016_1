@@ -1,4 +1,4 @@
-#include "encodingTree.h"
+#include "heap_huff.h"
 
 int main(){
 
@@ -8,10 +8,11 @@ int main(){
 	Node* p_queue = createPriorityQueue();
 	Node* huffman_tree = create_empty_tree();
 
+
 	int i;
 	for(i = 0; i < 256; i++){
 		if(FreqCounter[i] > 0) {
-			p_queue = insert(p_queue, i, FreqCounter[i]);
+			//p_queue = insert(p_queue, i, FreqCounter[i]);
 			DEBUG printf("Fila: ");
 			DEBUG printPriorityQueue(p_queue);
 		}

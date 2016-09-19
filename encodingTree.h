@@ -1,5 +1,5 @@
 #pragma once
-#include "priorityQueue.h"
+#include "heap_huff.h"
 
 // Cria um novo node e faz com que o primeiro da fila de prioridade seja o filho
 // à esquerda e com que o segundo seja o filho à direita

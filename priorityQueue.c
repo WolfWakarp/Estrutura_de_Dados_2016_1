@@ -1,7 +1,5 @@
 #include "priorityQueue.h"
 
-
-
 Node* createPriorityQueue(){
     return NULL;
 }

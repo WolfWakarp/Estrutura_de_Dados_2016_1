@@ -1,19 +1,17 @@
-struct min_heap {
-	int size;
-	Node *data[260];
-};
-typedef struct min_heap min_heap;
-min_heap* create_heap()
+#include "heap_huff.h"
+
+min_heap* create_heap(min_heap* newmh)
 {
-	min_heap *newmh = (min_heap*) malloc(sizeof(min_heap));
+	//min_heap *newmh = (min_heap*) malloc(sizeof(min_heap));
 	newmh->size = 0;
 	int i;
-	for(i=0;i<260;i++)
+	for(i=0;i<=260;i++)
 	{
 		newmh->data[i]=NULL;
 	}
 	return newmh;
 }
+
 void enqueue(min_heap *heap, Node *node)
 {
 	if (heap->size >= 260) 
