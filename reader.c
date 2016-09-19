@@ -13,6 +13,7 @@ void countRep(char *fileName){
 			    FreqCounter[c]+=1; //caso contrário adiciona 1 para a contagem daquele caracetere
 		}
 	}
+	fclose(file);
 }
 
 void printFrequency(int array[256]){

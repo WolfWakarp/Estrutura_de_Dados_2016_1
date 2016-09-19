@@ -1,4 +1,7 @@
 #include "encodingTree.h"
+#include "lib/test.h"
+
+
 
 int main(){
 
@@ -28,5 +31,10 @@ int main(){
 	DEBUG printPreOrder(huffman_tree);
 
 	DEBUG printf("\nEnd of running.");
+
+	printf("\n%d\n", size_huff_tree(huffman_tree));
+	
+	print_header("testandoheader.huff", huffman_tree);
+	read_file("testandoheader.huff");
 	return 0;
 }
