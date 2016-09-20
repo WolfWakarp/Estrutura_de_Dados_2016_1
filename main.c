@@ -1,5 +1,5 @@
 #include "encodingTree.h"
-#include "lib/test.h"
+#include "lib/huffman.h"
 
 
 
@@ -35,6 +35,7 @@ int main(){
 	printf("\n%d\n", size_huff_tree(huffman_tree));
 	
 	print_header("testandoheader.huff", huffman_tree);
-	read_file("testandoheader.huff");
+	read_file_and_make_tree("testandoheader.huff");
+
 	return 0;
 }
