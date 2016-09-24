@@ -4,6 +4,10 @@
 int main(){
 
 	countRep("teste.txt");
+	store_string("teste.txt");
+	DEBUG printf("Quantidade de elementos no arquivo: %d\n", strlen(file_string));
+	DEBUG printf("Arquivo: %s\n", file_string);
+
 	DEBUG printFrequency(FreqCounter);
 
 	Node* p_queue = createPriorityQueue();
@@ -35,7 +39,7 @@ int main(){
 	print_header("testandoheader.huff", huffman_tree);
 	read_file_and_make_tree("testandoheader.huff");
 
-	Huff_table* huffman_table = create_huff_table();
+	//Huff_table* huffman_table = create_huff_table();
 
 	return 0;
 }

@@ -1,16 +1,35 @@
 #include "reader.h"
 
 int FreqCounter[256] = {0};
+unsigned char file_string[100000] = {0};
 
 void countRep(char *fileName){
-	FILE *file = fopen(fileName, "r");
+	FILE *file = fopen(fileName, "rb");
 
 	int c; //auxiliar para guardar o caractere
 	if(file == NULL) printf("Empty File!\n");
 	else{
 		while((c=fgetc(file))){
 			    if(c == EOF) break; //encerrar caso o arquivo esteja no fim
-			    FreqCounter[c]+=1; //caso contrário adiciona 1 para a contagem daquele caracetere
+			    FreqCounter[c]+=1; //caso contrï¿½rio adiciona 1 para a contagem daquele caracetere
+		}
+	}
+	fclose(file);
+}
+
+void store_string(char *fileName){
+	FILE *file = fopen(fileName, "r");
+
+	int i = 0;
+	int c;
+	if(file == NULL) printf("Empty File!\n");
+	else{
+		while((c=fgetc(file))){
+			    if(c == EOF) break; //encerrar caso o arquivo esteja no fim
+					else{
+						file_string[i] = c;
+						i++;	
+					}
 		}
 	}
 	fclose(file);
