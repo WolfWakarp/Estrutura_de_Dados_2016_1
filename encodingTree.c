@@ -6,17 +6,17 @@ Node *mergeNodes(Node* queue){
 	newNode->m_left = queue;
 	newNode->m_right = queue->Next;
 
-	//fazendo queue apontar para o terceiro elemento, se possível, pois
-	// os dois primeiros já vão ser tomados para serem filhos do novo node
+	//fazendo queue apontar para o terceiro elemento, se possï¿½vel, pois
+	// os dois primeiros jï¿½ vï¿½o ser tomados para serem filhos do novo node
 	if(newNode->m_right->Next != NULL)
 		queue = newNode->m_right->Next;
-	else //se não for possível, a fila vai apontar pro novo node
+	else //se nï¿½o for possï¿½vel, a fila vai apontar pro novo node
 		queue = newNode;
 
 	newNode->m_left->Next = NULL;
 	newNode->m_right->Next = NULL;
 	newNode->m_data = '*';
-	//a frequência desse novo nó vai ser a soma da frequência de seus filhos
+	//a frequï¿½ncia desse novo nï¿½ vai ser a soma da frequï¿½ncia de seus filhos
 	newNode->m_frequency = newNode->m_left->m_frequency + newNode->m_right->m_frequency;
 
 	//inserindo esse no da fila novamente
@@ -35,7 +35,7 @@ void printPreOrder(Node *bt){
 }
 
 Node *convert_list_to_tree(Node *list){
-	//até acabar a lista ele vai dando merge
+	//atï¿½ acabar a lista ele vai dando merge
 	while(list->Next != NULL){
 			list = mergeNodes(list);
 			DEBUG printf("\nLista na convert to tree:\n");
@@ -46,4 +46,8 @@ Node *convert_list_to_tree(Node *list){
 
 Node* create_empty_tree() {
 	return NULL;
+}
+
+int isLeaf(Node *tree){
+	return (tree->m_left == NULL && tree->m_right == NULL);
 }

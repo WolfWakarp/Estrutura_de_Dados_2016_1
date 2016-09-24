@@ -39,7 +39,10 @@ int main(){
 	print_header("testandoheader.huff", huffman_tree);
 	read_file_and_make_tree("testandoheader.huff");
 
-	//Huff_table* huffman_table = create_huff_table();
+	Huff_table* huffman_table = create_huff_table();
+
+	unsigned char bit_string[100];
+	build_representations(huffman_tree, bit_string, -1, 0, huffman_table);
 
 	return 0;
 }

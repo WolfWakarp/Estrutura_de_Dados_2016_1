@@ -4,7 +4,7 @@
 typedef struct node Node;
 struct node{
   unsigned char m_data;
-  int m_frequency; //prioridade
+  int m_frequency; //prioridade, o menor fica na frente
   Node *Next;
   Node *m_left;
   Node *m_right;
@@ -14,12 +14,12 @@ Node* createPriorityQueue();
 
 int isEmpty(Node *node);
 
-//Inserção padrão de uma fila de prioridade, se o elemento inserido for igual a um
-//elemento na lista, o novo elemento ficará posicionado ANTES do elemento antigo
+//Inserï¿½ï¿½o padrï¿½o de uma fila de prioridade, se o elemento inserido for igual a um
+//elemento na lista, o novo elemento ficarï¿½ posicionado ANTES do elemento antigo
 Node* insert(Node *node, unsigned char data, int frequency);
 
-//Inserção padrão de uma fila de prioridade, obecendo as mesmas regras do insert normal
-//porém esse insere um node inteiro, e não itens de um node, como a função acima
+//Inserï¿½ï¿½o padrï¿½o de uma fila de prioridade, obecendo as mesmas regras do insert normal
+//porï¿½m esse insere um node inteiro, e nï¿½o itens de um node, como a funï¿½ï¿½o acima
 Node *insertNode(Node *queue, Node *inserted_node);
 
 void printPriorityQueue(Node *node);

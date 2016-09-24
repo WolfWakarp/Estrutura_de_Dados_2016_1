@@ -3,7 +3,7 @@
 
 typedef struct list List;
 struct list{
-  short bit;
+  unsigned char bit;
   List *Next;
 };
 
@@ -19,3 +19,5 @@ struct huff_table{
 };
 
 Huff_table* create_huff_table();
+
+void build_representations(Node *tree, unsigned char *bit_string, int index, unsigned int bit, Huff_table *ht);
