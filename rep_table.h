@@ -1,16 +1,21 @@
 #pragma once
 #include "encodingTree.h"
 
-typedef struct huff_table Huff_table;
-struct huff_table{
-  int size;
-  List *first;
-};
-
 typedef struct list List;
 struct list{
   short bit;
   List *Next;
 };
 
-void create_huff_table(Huff_table* ht);
+typedef struct element Element;
+struct element{
+  int size;
+  List *first;
+};
+
+typedef struct huff_table Huff_table;
+struct huff_table{
+  Element* table[256];
+};
+
+Huff_table* create_huff_table();

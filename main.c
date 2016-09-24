@@ -1,7 +1,5 @@
-#include "encodingTree.h"
+#include "rep_table.h"
 #include "lib/huffman.h"
-
-
 
 int main(){
 
@@ -20,7 +18,7 @@ int main(){
 		}
 	}
 
-	//ÁRVORE DE HUFFMAN
+	//ï¿½RVORE DE HUFFMAN
 	huffman_tree = convert_list_to_tree(p_queue);
 
 	printPriorityQueue(p_queue);
@@ -33,9 +31,11 @@ int main(){
 	DEBUG printf("\nEnd of running.");
 
 	printf("\n%d\n", size_huff_tree(huffman_tree));
-	
+
 	print_header("testandoheader.huff", huffman_tree);
 	read_file_and_make_tree("testandoheader.huff");
+
+	Huff_table* huffman_table = create_huff_table();
 
 	return 0;
 }

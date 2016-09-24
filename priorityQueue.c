@@ -1,7 +1,5 @@
 #include "priorityQueue.h"
 
-
-
 Node* createPriorityQueue(){
     return NULL;
 }
@@ -74,4 +72,3 @@ void printPriorityQueue(Node *node){
 		printf("Char: %c  Rep: %d | ", temp->m_data, temp->m_frequency);
 	}
 }
-
