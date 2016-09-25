@@ -1,48 +1,77 @@
+#include <string.h>
 #include "rep_table.h"
 #include "lib/huffman.h"
+#include "lib/util.h"
 
-int main(){
+int main(int argc, char* args[]){
 
-	countRep("teste.txt");
-	store_string("teste.txt");
-	DEBUG printf("Quantidade de elementos no arquivo: %d\n", strlen(file_string));
-	DEBUG printf("Arquivo: %s\n", file_string);
+	if(argc < 3){
+		printf("uso: %s [c]omprimir|[d]escomprimir nome_arquivo [arquivo_saida]\n", args[0]);
+		exit(1);
+	}
 
-	DEBUG printFrequency(FreqCounter);
+	char *source_file_name = args[2];
+	char *dest_file_name;
 
-	Node* p_queue = createPriorityQueue();
-	Node* huffman_tree = create_empty_tree();
+	if(args[1][0] != 'c' && args[1][0] != 'd'){
+		printf("parametro incorreto\n");
+		printf("uso: %s [c]omprimir|[d]escomprimir nome_arquivo [arquivo_saida]\n", args[0]);
+		exit(1);
+	}
 
-	int i;
-	for(i = 0; i < 256; i++){
-		if(FreqCounter[i] > 0) {
-			p_queue = insert(p_queue, i, FreqCounter[i]);
-			DEBUG printf("Fila: ");
-			DEBUG printPriorityQueue(p_queue);
+	if(argc == 4){
+		dest_file_name = args[3];
+	}else{
+		dest_file_name = (char *) malloc(sizeof(char *) * strlen(args[2]));
+		if(!remove_huff_extension(dest_file_name, source_file_name, strlen(args[2]))){
+			printf("arquivo fornecido nao possui extensao .huff\n");
+			exit(1);
 		}
 	}
 
-	//�RVORE DE HUFFMAN
-	huffman_tree = convert_list_to_tree(p_queue);
+	if(args[1] == 'c'){
 
-	printPriorityQueue(p_queue);
+		count_rep(source_file_name);
+		store_string(source_file_name);
 
-	DEBUG printf("\n");
-	DEBUG printf("%d\n\n\n", huffman_tree->m_frequency);
-	DEBUG printf("Pre Order:\n");
-	DEBUG printPreOrder(huffman_tree);
+		DEBUG printf("Quantidade de elementos no arquivo: %d\n", strlen(file_string));
+		DEBUG printf("Arquivo: %s\n", file_string);
 
-	DEBUG printf("\nEnd of running.");
+		DEBUG printFrequency(FreqCounter);
 
-	printf("\n%d\n", size_huff_tree(huffman_tree));
+		Node* p_queue = create_priority_queue();
+		Node* huffman_tree = create_empty_tree();
 
-	print_header("testandoheader.huff", huffman_tree);
-	read_file_and_make_tree("testandoheader.huff");
+		int i;
+		for(i = 0; i < 256; i++){
+			if(FreqCounter[i] > 0) {
+				p_queue = insert(p_queue, i, FreqCounter[i]);
+				DEBUG printf("Fila: ");
+				DEBUG print_priority_queue(p_queue);
+			}
+		}
 
-	Huff_table* huffman_table = create_huff_table();
+		//ARVORE DE HUFFMAN
+		huffman_tree = convert_list_to_tree(p_queue);
 
-	unsigned char bit_string[100];
-	build_representations(huffman_tree, bit_string, -1, 0, huffman_table);
+		print_priority_queue(p_queue);
+
+		DEBUG printf("\n");
+		DEBUG printf("%d\n\n\n", huffman_tree->m_frequency);
+		DEBUG printf("Pre Order:\n");
+		DEBUG print_pre_order(huffman_tree);
+
+		DEBUG printf("\nEnd of running.");
+
+		printf("\n%d\n", size_huff_tree(huffman_tree));
+		Huff_table* huffman_table = create_huff_table();
+
+		unsigned char bit_string[100];
+		build_representations(huffman_tree, bit_string, -1, 0, huffman_table);
+	}else{
+		decompress(source_file_name, dest_file_name);
+	}
+	
 
 	return 0;
 }

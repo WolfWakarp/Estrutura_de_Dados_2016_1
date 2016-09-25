@@ -3,8 +3,8 @@
 int FreqCounter[256] = {0};
 unsigned char file_string[100000] = {0};
 
-void countRep(char *fileName){
-	FILE *file = fopen(fileName, "rb");
+void count_rep(char *file_name){
+	FILE *file = fopen(file_name, "rb");
 
 	int c; //auxiliar para guardar o caractere
 	if(file == NULL) printf("Empty File!\n");
@@ -37,7 +37,7 @@ void store_string(char *fileName){
 
 void printFrequency(int array[256]){
 	int i;
-	for(i=0; i < 256; i++){
+	for(i = 0; i < 256; i++){
 		if(array[i] > 0) {
 		      printf("char %c: %d times\n", i, array[i]);
 		}

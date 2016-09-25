@@ -7,7 +7,7 @@
 extern int FreqCounter[256];
 extern unsigned char file_string[100000];
 
-void countRep(char *fileName);
+void count_rep(char *fileName);
 
 void store_string(char *fileName);
 

@@ -10,9 +10,9 @@ struct node{
   Node *m_right;
 };
 
-Node* createPriorityQueue();
+Node* create_priority_queue();
 
-int isEmpty(Node *node);
+int is_empty(Node *node);
 
 //Inser��o padr�o de uma fila de prioridade, se o elemento inserido for igual a um
 //elemento na lista, o novo elemento ficar� posicionado ANTES do elemento antigo
@@ -20,6 +20,6 @@ Node* insert(Node *node, unsigned char data, int frequency);
 
 //Inser��o padr�o de uma fila de prioridade, obecendo as mesmas regras do insert normal
 //por�m esse insere um node inteiro, e n�o itens de um node, como a fun��o acima
-Node *insertNode(Node *queue, Node *inserted_node);
+Node *insert_node(Node *queue, Node *inserted_node);
 
-void printPriorityQueue(Node *node);
+void print_priority_queue(Node *node);

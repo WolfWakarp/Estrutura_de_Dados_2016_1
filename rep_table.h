@@ -1,5 +1,5 @@
 #pragma once
-#include "encodingTree.h"
+#include "encoding_tree.h"
 
 typedef struct list List;
 struct list{

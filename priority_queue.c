@@ -1,10 +1,10 @@
-#include "priorityQueue.h"
+#include "priority_queue.h"
 
-Node* createPriorityQueue(){
+Node* create_priority_queue(){
     return NULL;
 }
 
-int isEmpty(Node *node){
+int is_empty(Node *node){
 	return ((node == NULL) ? 1 : 0);
 }
 
@@ -16,7 +16,7 @@ Node* insert(Node *node, unsigned char data, int frequency){
 		newNode->m_left = NULL;
 		newNode->m_right = NULL;
 		newNode->Next = node;
-		DEBUG printf("\nNo if Inseriu: %c | Com Rep: %d\n", data, frequency);
+		// DEBUG printf("\nNo if Inseriu: %c | Com Rep: %d\n", data, frequency);
 
 		return newNode;
 	}
@@ -35,13 +35,13 @@ Node* insert(Node *node, unsigned char data, int frequency){
 		newNode->m_right = NULL;
 		temp->Next = newNode;
 
-		DEBUG printf("\nNo else Inseriu: %c | Com Rep: %d\n", data, frequency);
+		// DEBUG printf("\nNo else Inseriu: %c | Com Rep: %d\n", data, frequency);
 
 		return node;
 	}
 }
 
-Node *insertNode(Node *node, Node *inserted){
+Node *insert_node(Node *node, Node *inserted){
 	if(node == inserted){
 		inserted->Next = NULL;
 		return inserted;
@@ -64,7 +64,7 @@ Node *insertNode(Node *node, Node *inserted){
 	}
 }
 
-void printPriorityQueue(Node *node){
+void print_priority_queue(Node *node){
 	Node *temp;
 	if(node == NULL)
 		printf("\nFila de prioridade vazia!\n");

@@ -13,7 +13,7 @@ void build_representations(Node *tree, unsigned char *bit_string, int index, uns
 	if(index > -1){
 		bit_string[index] = bit;
 		DEBUG printf("Adicionou na string: %d na pos %d\n", bit_string[index], index);
-		if(isLeaf(tree)){
+		if(is_leaf(tree)){
 			DEBUG printf("\nChar:  %c ", tree->m_data);
 			int i;
 			DEBUG printf("\nCod: ");

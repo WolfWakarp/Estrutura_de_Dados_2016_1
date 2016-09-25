@@ -1,6 +1,6 @@
-#include "encodingTree.h"
+#include "encoding_tree.h"
 
-Node *mergeNodes(Node* queue){
+Node *merge_nodes(Node* queue){
 	//criando o node e definindo seus filhos
 	Node *newNode = (Node*) malloc(sizeof(Node));
 	newNode->m_left = queue;
@@ -20,26 +20,26 @@ Node *mergeNodes(Node* queue){
 	newNode->m_frequency = newNode->m_left->m_frequency + newNode->m_right->m_frequency;
 
 	//inserindo esse no da fila novamente
-	queue = insertNode(queue, newNode);
+	queue = insert_node(queue, newNode);
 
 	return queue;
 }
 
-void printPreOrder(Node *bt){
-	if(!isEmpty(bt)){
+void print_pre_order(Node *bt){
+	if(!is_empty(bt)){
 		printf("Char: %c | Freq: %d\n", bt->m_data, bt->m_frequency);
 		//printf("%c", bt->m_data);
-		printPreOrder(bt->m_left);
-		printPreOrder(bt->m_right);
+		print_pre_order(bt->m_left);
+		print_pre_order(bt->m_right);
 	}
 }
 
 Node *convert_list_to_tree(Node *list){
 	//at� acabar a lista ele vai dando merge
 	while(list->Next != NULL){
-			list = mergeNodes(list);
+			list = merge_nodes(list);
 			DEBUG printf("\nLista na convert to tree:\n");
-			DEBUG printPriorityQueue(list);
+			DEBUG print_priority_queue(list);
 		}
 	return list;
 }
@@ -48,6 +48,6 @@ Node* create_empty_tree() {
 	return NULL;
 }
 
-int isLeaf(Node *tree){
+int is_leaf(Node *tree){
 	return (tree->m_left == NULL && tree->m_right == NULL);
 }
