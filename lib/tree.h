@@ -27,6 +27,9 @@ int bst_search(bt* bst, int value);
 /* Limpa a binary tree */
 void bst_free(bt* bst);
 
+/*ve se ela é uma avl, se sim retorna 1, caso não retorna 0*/
+int is_it_an_avl(bt *bst);
+
 /* Imprime a bst */
 void bst_print(bt* bst);
 
@@ -47,6 +50,9 @@ int balance_factor(bt* bst);
 
 /* Rotacionar a arvore */
 bt* bst_rotate_left(bt* bst);
+
+/*voce manda uma binaria completa e volta uma avl*/
+bt* balance_everything(bt * bst);
 
 bt* bst_rotate_right(bt* bst);
 
@@ -112,14 +118,16 @@ bt* bst_insert(bt* bst, int value, int balance){
 		bst = bst_create(value);
 	}else if(bst->value > value){
 		bst->left = bst_insert(bst->left, value, balance);
-		if(balance){
+		//não necessário                                    ////mudança
+		/*if(balance){
 			bst = bst_balance(bst);
-		}
+		}*/
 	}else{
 		bst->right = bst_insert(bst->right, value, balance);
-		if(balance){
+		//não necessário                                    ////mudança
+		/*if(balance){
 			bst = bst_balance(bst);
-		}
+		}*/
 	}
 	return bst;
 }
@@ -192,6 +200,73 @@ int bst_height(bt* bst){
 }
 
 int balance_factor(bt* bst){
-	return bst_height(bst->left) - bst_height(bst->right);
+	if(bt == NULL) return 0; //mudança para caso seja null.
+	else return bst_height(bst->left) - bst_height(bst->right);
 }
 
+int is_it_an_avl(bt *bst)
+{	
+	if(bst == NULL)
+	{	//se estiver vazio volta sim
+		return 1;
+	}
+	int fbalance_bst = balance_factor(bst);
+	if(fbalance_bst < -2 || fbalance_bst > 2)
+	{ //se não está nesse parametros logo não é avl
+		return 0;
+	}
+	int left = is_it_an_avl(bt->left); //o filho da esquerda é?
+	int right = is_it_an_avl(bt->right); //o filho da direita é?
+	if(left && right) // e os dois?
+	{	//deu bom.
+		return 1;
+	}
+	else
+	{	//deu ruim.
+		return 0;
+	}
+}
+bt* balance_everything(bt *bst)
+{
+	if(bst == NULL)
+	{
+		return NULL;
+	}
+	//vamos olhar para os filhinhos primeiro
+	if(!bst_is_empty(bst->right) && !is_it_an_avl(bst->right))
+	{	//filhinho da direita está balanceado? se não meu amigo balanceia isso.
+		bst->right = balance_everything(bst->right);
+	}
+	if(!bst_is_empty(bst->right) && !is_it_an_avl(bst->right))
+	{	//filhinho da esquerda ta se sentindo muito achandoq ue ja é avl, será que é?
+		bst->left = balance_everything(bst->left);
+	}
+	// ta na hora do pai hahaha
+	int is_it_alright = is_it_an_avl(bst);
+	if(is_it_alright)
+	{
+		return bst;
+	}
+	else
+	{
+		if(balance_factor(bst) < -1)
+		{
+			/*braço direito ta doendo*/
+			if(balance_factor(bst->right) > 0)
+			{ // aquele tipico RL
+				bst->right = bst_rotate_right(bst->right);
+			}
+			bst->left = bst_rotate_left(bst->left);
+		}
+		else
+		{
+			/*braço esquerdo ta doendo*/
+			if(balance_factor(bst->left) < 0)
+			{ // aquele tipico RL
+				bst->left = bst_rotate_left(bst->left);
+			}
+			bst->right = bst_rotate_right(bst->right);
+		}
+		return bst;
+	}
+}
