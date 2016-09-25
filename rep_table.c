@@ -13,19 +13,26 @@ void build_representations(Node *tree, unsigned char *bit_string, int index, uns
 	if(index > -1){
 		bit_string[index] = bit;
 		DEBUG printf("Adicionou na string: %d na pos %d\n", bit_string[index], index);
-	}
-	if(isLeaf(tree)){
-		DEBUG printf("\nChar:  %c ", tree->m_data);
-		int i;
-		DEBUG printf("\nCod: ");
-		DEBUG if(index == 0) printf("%d", bit_string[0]);
+		if(isLeaf(tree)){
+			DEBUG printf("\nChar:  %c ", tree->m_data);
+			int i;
+			DEBUG printf("\nCod: ");
+			DEBUG if(index == 0) printf("%d", bit_string[0]);
+			if(index == 0){
+				for(i = 1; i <= index; i++){
+					DEBUG printf("%d", bit_string[i]);
+				}
+			} else {
+				for(i = 0; i <= index; i++){
+					DEBUG printf("%d", bit_string[i]);
+				}
+			}
 
-		for(i = 0; i <= index; i++){
-			DEBUG printf("%d", bit_string[i]);
+			DEBUG printf("\n");
+			return;
 		}
-		DEBUG printf("\n");
-		return;
 	}
+
 	build_representations(tree->m_left, bit_string, index + 1, 0, ht);
 	build_representations(tree->m_right, bit_string, index + 1, 1, ht);
 	return;
