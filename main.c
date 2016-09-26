@@ -5,21 +5,21 @@
 
 int main(int argc, char* args[]){
 
-	if(argc < 3){
+	/*if(argc < 3){
 		printf("uso: %s [c]omprimir|[d]escomprimir nome_arquivo [arquivo_saida]\n", args[0]);
 		exit(1);
-	}
+	}*/
 
-	char *source_file_name = args[2];
-	char *dest_file_name;
+	//char *source_file_name = args[2];
+	//char *dest_file_name;
 
-	if(args[1][0] != 'c' && args[1][0] != 'd'){
+	/*if(args[1][0] != 'c' && args[1][0] != 'd'){
 		printf("parametro incorreto\n");
 		printf("uso: %s [c]omprimir|[d]escomprimir nome_arquivo [arquivo_saida]\n", args[0]);
 		exit(1);
-	}
+	}*/
 
-	if(argc == 4){
+	/*if(argc == 4){
 		dest_file_name = args[3];
 	}else{
 		dest_file_name = (char *) malloc(sizeof(char *) * strlen(args[2]));
@@ -27,12 +27,14 @@ int main(int argc, char* args[]){
 			printf("arquivo fornecido nao possui extensao .huff\n");
 			exit(1);
 		}
-	}
+	}*/
 
-	if(args[1] == 'c'){
+	//if(args[1] == 'c'){
 
-		count_rep(source_file_name);
-		store_string(source_file_name);
+		//count_rep(source_file_name);
+		//store_string(source_file_name);
+		count_rep("teste.txt");
+		store_string("teste.txt");
 
 		DEBUG printf("Quantidade de elementos no arquivo: %d\n", strlen(file_string));
 		DEBUG printf("Arquivo: %s\n", file_string);
@@ -68,10 +70,7 @@ int main(int argc, char* args[]){
 
 		unsigned char bit_string[100];
 		build_representations(huffman_tree, bit_string, -1, 0, huffman_table);
-	}else{
-		decompress(source_file_name, dest_file_name);
-	}
-	
+		print_all_reps(huffman_table);
 
 	return 0;
 }

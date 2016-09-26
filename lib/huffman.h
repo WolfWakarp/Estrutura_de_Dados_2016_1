@@ -1,3 +1,4 @@
+#pragma once
 #include <stdio.h>
 #include "../encoding_tree.h"
 
@@ -117,7 +118,7 @@ int rep_huffman(Node* binary_tree, unsigned char ch){
 	//e mandamos esse 1 pra esquerda: ficando 0000 0010
 	//em seguida colocamos mais um 1 no zero, fica 0000 0011
 	//mandamos pra esquerda ficando 0000 0110
-	//e por fim chegamos no ultimo caminho, colocando mais um 
+	//e por fim chegamos no ultimo caminho, colocando mais um
 	//ficando 0000 0111
 	//e nao mandamos mais pra esquerda pq se nao ia ficar errado a representação
 	if(binary_tree != NULL){
@@ -126,7 +127,7 @@ int rep_huffman(Node* binary_tree, unsigned char ch){
 				printf("esta %d %d\n", position, bit);
 				bit = set_bit(bit, 0);
 				printf("%d\n", bit);
-				current_node = current_node->m_right;	
+				current_node = current_node->m_right;
 				if(current_node != NULL && !is_leaf(current_node) && current_node->m_data != ch) bit = bit << 1;
 			}else{
 				printf("aqui %d %d\n", position, bit);
@@ -134,7 +135,7 @@ int rep_huffman(Node* binary_tree, unsigned char ch){
 				if(current_node != NULL && !is_leaf(current_node) && current_node->m_data != ch) bit = bit << 1;
 			}
 		}
-		
+
 	}
 	printf("%d\n", bit);
 	print_binary(bit);
@@ -166,14 +167,14 @@ int print_header(char* file_name, Node* huff){
 	}
 
 	//posteriormente será colocado o trash_size
-	unsigned char trash_size = 0;	
-	
+	unsigned char trash_size = 0;
+
 	//dividindo o size_tree em dois bytes
 	//como sei que o máximo será 13bits (8191 em decimal)
 	//posso utitlizar operações shift para pegar os 8 bit de cada lado
 	unsigned char first_byte = (size_tree>>8);
 	unsigned char second_byte = size_tree;
-	
+
 	//como o número máximo da trash será composto por 3 bits, desloco eles 5 vezes
 	//para obter 5 espaços sobrando: exemplo
 	// 0000 0101 << 5 = 1010 0000
@@ -206,12 +207,12 @@ int tree_size(FILE* file){
 	fseek(file, 0, SEEK_SET);
 
 	unsigned char first_byte = fgetc(file);
-	unsigned char second_byte = fgetc(file);	
+	unsigned char second_byte = fgetc(file);
 
 	first_byte = first_byte << 3;
 	first_byte = first_byte >> 3;
 
-	int size = (first_byte << 8) | second_byte; 
+	int size = (first_byte << 8) | second_byte;
 
 	return size;
 }
@@ -242,7 +243,7 @@ void decompress(char* source_file_name, char* dest_file_name){
 	int ch, i, j, pos;
 
 	fseek(source_file, 0, SEEK_END);
-	
+
 	int total_bytes = ftell(source_file);
 	DEBUG printf("%d\n", total_bytes);
 	int size_tree = tree_size(source_file);
@@ -258,14 +259,14 @@ void decompress(char* source_file_name, char* dest_file_name){
 	pos = 0;
 
 	Node* root_huff = make_tree(&s, &pos);
-	
+
 	DEBUG print_huff_tree(root_huff);
 	DEBUG printf("Quantidade de bytes escritos: %ld\n", ftell(source_file));
 	DEBUG printf("Tamanho da arvore: %d\n", size_tree);
 	DEBUG printf("Trash size: %d\n", size_trash);
 
 	fseek(source_file, size_tree+2, SEEK_SET);
-	
+
 	unsigned int bit_cur = 0;
 	Node* root_aux = root_huff;
 
@@ -280,7 +281,7 @@ void decompress(char* source_file_name, char* dest_file_name){
 			}
 			if(is_leaf(root_aux)){
 				fprintf(dest_file, "%c", root_aux->m_data);
-				root_aux = root_huff;	
+				root_aux = root_huff;
 			}
 		}
 	}
@@ -295,11 +296,10 @@ void decompress(char* source_file_name, char* dest_file_name){
 		}
 		if(is_leaf(root_aux)){
 			fprintf(dest_file, "%c", root_aux->m_data);
-			root_aux = root_huff;	
+			root_aux = root_huff;
 		}
 	}
 
 	fclose(dest_file);
 	fclose(source_file);
 }
-

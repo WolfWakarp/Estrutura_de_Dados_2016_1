@@ -1,3 +1,4 @@
+#pragma once
 #include <string.h>
 #include <stdlib.h>
 
@@ -21,4 +22,4 @@ int remove_huff_extension(char *dest_file_name, char *source_file_name, int size
 	dest_file_name[i] = '\0';
 
 	return 1;
-} 
+}
