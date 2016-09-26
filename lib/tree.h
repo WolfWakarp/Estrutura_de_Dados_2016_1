@@ -200,7 +200,7 @@ int bst_height(bt* bst){
 }
 
 int balance_factor(bt* bst){
-	if(bt == NULL) return 0; //mudança para caso seja null.
+	if(bst == NULL) return 0; //mudança para caso seja null.
 	else return bst_height(bst->left) - bst_height(bst->right);
 }
 
@@ -215,8 +215,8 @@ int is_it_an_avl(bt *bst)
 	{ //se não está nesse parametros logo não é avl
 		return 0;
 	}
-	int left = is_it_an_avl(bt->left); //o filho da esquerda é?
-	int right = is_it_an_avl(bt->right); //o filho da direita é?
+	int left = is_it_an_avl(bst->left); //o filho da esquerda é?
+	int right = is_it_an_avl(bst->right); //o filho da direita é?
 	if(left && right) // e os dois?
 	{	//deu bom.
 		return 1;
