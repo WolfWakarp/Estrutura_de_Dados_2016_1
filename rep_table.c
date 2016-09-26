@@ -10,8 +10,8 @@ Huff_table* create_huff_table(){
 }
 
 void build_representations(Node *tree, unsigned char *bit_string, int index, unsigned int bit, Huff_table *ht){
-	if(index > -1){
-		bit_string[index] = bit;
+	if(index > -1){ //Se estiver em -1 foi a primeira chamada da função, portanto tree ainda é a raiz da árvore
+		bit_string[index] = bit; //vai sempre salvando o bit passado na pos correta da string
 
 		if(is_leaf(tree)){
 			Element *newElement = (Element*) malloc(sizeof(Element));
@@ -27,6 +27,8 @@ void build_representations(Node *tree, unsigned char *bit_string, int index, uns
 		}
 
 	}
+	//As chamadas recursivas vão para esquerda ou para direita, passando respectivamente 0 ou 1 como bits
+	//e incrementando o index para avançar na string, quando for feito o backtrack o index volta para o anterior
 	build_representations(tree->m_left, bit_string, index + 1, 0, ht);
 	build_representations(tree->m_right, bit_string, index + 1, 1, ht);
 	return;
@@ -40,10 +42,9 @@ List* insert_in_list(List *first, unsigned char bit){
 		first = newNode;
 	} else {
 		List *temp;
-		for(temp = first; temp->Next != NULL; temp = temp->Next);
+		for(temp = first; temp->Next != NULL; temp = temp->Next); //vai buscar o final da lista
 		temp->Next = newNode;
 	}
-	
 	return first;
 }
 
@@ -51,7 +52,7 @@ void print_all_reps(Huff_table *ht){
 	int i;
 	for(i = 0; i < 256; i++){
 		if(ht->table[i] != NULL){
-			printf("\n%c ->", i);
+			printf("\n%c ->", i); //o caractere vai ser o equivalente à sua pos na tabela ASCII. Ex: A no i=65.
 			print_linked_list(ht->table[i]->first);
 		}
 	}

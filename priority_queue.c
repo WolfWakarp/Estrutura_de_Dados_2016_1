@@ -16,8 +16,6 @@ Node* insert(Node *node, unsigned char data, int frequency){
 		newNode->m_left = NULL;
 		newNode->m_right = NULL;
 		newNode->Next = node;
-		// DEBUG printf("\nNo if Inseriu: %c | Com Rep: %d\n", data, frequency);
-
 		return newNode;
 	}
 	else{
@@ -34,8 +32,6 @@ Node* insert(Node *node, unsigned char data, int frequency){
 		newNode->m_left = NULL;
 		newNode->m_right = NULL;
 		temp->Next = newNode;
-
-		// DEBUG printf("\nNo else Inseriu: %c | Com Rep: %d\n", data, frequency);
 
 		return node;
 	}

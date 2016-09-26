@@ -63,14 +63,13 @@ int main(int argc, char* args[]){
 		DEBUG printf("Pre Order:\n");
 		DEBUG print_pre_order(huffman_tree);
 
-		DEBUG printf("\nEnd of running.");
-
-		printf("\n%d\n", size_huff_tree(huffman_tree));
+		printf("\nTree size: %d\n", size_huff_tree(huffman_tree));
 		Huff_table* huffman_table = create_huff_table();
 
 		unsigned char bit_string[100];
 		build_representations(huffman_tree, bit_string, -1, 0, huffman_table);
 		print_all_reps(huffman_table);
 
+		DEBUG printf("\nEnd of running.");
 	return 0;
 }
