@@ -41,17 +41,22 @@ int main(int argc, char* args[]){
 
 		DEBUG printFrequency(FreqCounter);
 
+		//Fila de prioridade que vai gerar a árvore de huffman
 		Node* p_queue = create_priority_queue();
+		//Arvore de huffman
 		Node* huffman_tree = create_empty_tree();
+		//Tabela de huffman, que guarda a cod de cada char
+		Huff_table* huffman_table = create_huff_table();
 
 		int i;
+		//Inserindo todos os elementos que aparecem pelo menos uma vez na fila de prioridade
 		for(i = 0; i < 256; i++){
 			if(FreqCounter[i] > 0) {
 				p_queue = insert(p_queue, i, FreqCounter[i]);
-				DEBUG printf("Fila: ");
-				DEBUG print_priority_queue(p_queue);
 			}
 		}
+		DEBUG printf("Fila: ");
+		DEBUG print_priority_queue(p_queue);
 
 		//ARVORE DE HUFFMAN
 		huffman_tree = convert_list_to_tree(p_queue);
@@ -63,13 +68,17 @@ int main(int argc, char* args[]){
 		DEBUG printf("Pre Order:\n");
 		DEBUG print_pre_order(huffman_tree);
 
-		printf("\nTree size: %d\n", size_huff_tree(huffman_tree));
-		Huff_table* huffman_table = create_huff_table();
+		DEBUG printf("\nTree size: %d\n", size_huff_tree(huffman_tree));
 
-		unsigned char bit_string[100];
-		build_representations(huffman_tree, bit_string, -1, 0, huffman_table);
-		print_all_reps(huffman_table);
+		unsigned char bit_string[128];
+		build_representations(huffman_tree, bit_string, -1, '0', huffman_table);
+		DEBUG print_all_reps(huffman_table);
 
-		DEBUG printf("\nEnd of running.");
+		get_file_cod(huffman_table);
+		DEBUG printf("\nFile cod: %s", file_codification);
+		//count trash não precisa de argumento pois usa a string global file_codification
+		DEBUG printf("\nTamanho do lixo: %d", count_trash_size());
+
+		DEBUG printf("\n\nEnd of running.");
 	return 0;
 }
