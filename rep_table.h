@@ -1,8 +1,6 @@
 #pragma once
 #include "encoding_tree.h"
 
-//Variável global para guardar a string completa da codificação do texto consultando a huff_table
-extern unsigned char file_codification[];
 
 //Node da lista que vai guardar cada bit
 typedef struct list List;
@@ -54,11 +52,5 @@ void print_all_reps(Huff_table *ht);
 
 //RECEBE uma lista List* e imprime recursivamente
 void print_linked_list(List *node);
-
-/* RECEBE a tabela de huffman HT
- * Relê o arquivo através da variável global file_string e
- * concatena na variável global file_codification
- */
-void get_file_cod(Huff_table *ht);
 
 int count_trash_size(/*vai trabalhar em cima da variável global file_codification*/);

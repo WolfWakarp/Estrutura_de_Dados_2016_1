@@ -5,36 +5,46 @@
 
 int main(int argc, char* args[]){
 
-	/*if(argc < 3){
+	if(argc < 3){
 		printf("uso: %s [c]omprimir|[d]escomprimir nome_arquivo [arquivo_saida]\n", args[0]);
 		exit(1);
-	}*/
+	}
 
-	//char *source_file_name = args[2];
-	//char *dest_file_name;
+	char *source_file_name = args[2];
+	char *dest_file_name;
 
-	/*if(args[1][0] != 'c' && args[1][0] != 'd'){
+	if(args[1][0] != 'c' && args[1][0] != 'd'){
 		printf("parametro incorreto\n");
 		printf("uso: %s [c]omprimir|[d]escomprimir nome_arquivo [arquivo_saida]\n", args[0]);
 		exit(1);
-	}*/
+	}
 
-	/*if(argc == 4){
+	if(argc == 4){
 		dest_file_name = args[3];
-	}else{
+	}else if(args[1][0] == 'd'){
 		dest_file_name = (char *) malloc(sizeof(char *) * strlen(args[2]));
 		if(!remove_huff_extension(dest_file_name, source_file_name, strlen(args[2]))){
 			printf("arquivo fornecido nao possui extensao .huff\n");
 			exit(1);
 		}
-	}*/
+	}else if(args[1][0] == 'c'){
+		dest_file_name = (char *) malloc(sizeof(char *) * (strlen(args[2])+5));
+		strcpy(dest_file_name, source_file_name);
+		dest_file_name[strlen(source_file_name)] = '.';
+		dest_file_name[strlen(source_file_name)+1] = 'h';
+		dest_file_name[strlen(source_file_name)+2] = 'u';
+		dest_file_name[strlen(source_file_name)+3] = 'f';
+		dest_file_name[strlen(source_file_name)+4] = 'f';
+		dest_file_name[strlen(source_file_name)+5] = '\0';
+		printf("%s\n", dest_file_name);
+	}
 
-	//if(args[1] == 'c'){
+	if(args[1][0] == 'c'){
 
-		//count_rep(source_file_name);
-		//store_string(source_file_name);
-		count_rep("EstratégiasemumNovoParadigmaGlobalizado.html");
-		store_string("EstratégiasemumNovoParadigmaGlobalizado.html");
+		count_rep(source_file_name);
+		store_string(source_file_name);
+		// count_rep("EstratégiasemumNovoParadigmaGlobalizado.html");
+		// store_string("EstratégiasemumNovoParadigmaGlobalizado.html");
 
 		DEBUG printf("Quantidade de elementos no arquivo: %d\n", strlen(file_string));
 		DEBUG printf("Arquivo: %s\n", file_string);
@@ -61,7 +71,7 @@ int main(int argc, char* args[]){
 		//ARVORE DE HUFFMAN
 		huffman_tree = convert_list_to_tree(p_queue);
 
-		print_priority_queue(p_queue);
+		DEBUG print_priority_queue(p_queue);
 
 		DEBUG printf("\n");
 		DEBUG printf("%d\n\n\n", huffman_tree->m_frequency);
@@ -72,13 +82,16 @@ int main(int argc, char* args[]){
 
 		unsigned char bit_string[128];
 		build_representations(huffman_tree, bit_string, -1, '0', huffman_table);
-		DEBUG print_all_reps(huffman_table);
+		print_all_reps(huffman_table);
 
-		get_file_cod(huffman_table);
-		DEBUG printf("\nFile cod: %s", file_codification);
 		//count trash não precisa de argumento pois usa a string global file_codification
 		DEBUG printf("\nTamanho do lixo: %d", count_trash_size());
 
+		compress(dest_file_name, huffman_table, huffman_tree);
+
 		DEBUG printf("\n\nEnd of running.");
+	}else{
+		decompress(source_file_name, dest_file_name);
+	}
 	return 0;
 }

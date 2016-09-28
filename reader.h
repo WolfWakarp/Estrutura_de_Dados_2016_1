@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define DEBUG if(1)
+#define DEBUG if(0)
 
 extern int FreqCounter[256];
 extern unsigned char *file_string;

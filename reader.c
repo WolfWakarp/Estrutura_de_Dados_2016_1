@@ -19,22 +19,27 @@ void count_rep(char *file_name){
 
 void store_string(char *fileName){
 	FILE *file = fopen(fileName, "r");
-
+	if(file == NULL){
+		printf("Empty File!\n");
+		return ;
+	}
 	int i = 0;
 	int c;
 	fseek(file, 0, SEEK_END);
 	int total_bytes = ftell(file);
+
 	file_string = (char*)malloc(sizeof(char)*total_bytes);
-	if(file == NULL) printf("Empty File!\n");
-	else{
-		while((c=fgetc(file))){
-			    if(c == EOF) break; //encerrar caso o arquivo esteja no fim
-					else{
-						file_string[i] = c;
-						i++;	
-					}
+	fseek(file, 0, SEEK_SET);
+
+	while((c=fgetc(file))){
+		if(c == EOF){ 
+			break; //encerrar caso o arquivo esteja no fim
+		}else{
+			file_string[i] = c;
+			i++;	
 		}
 	}
+	file_string[i] = '\0';
 	fclose(file);
 }
 
