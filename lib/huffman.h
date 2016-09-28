@@ -156,44 +156,30 @@ void print_huff_tree(Node* huff){
 }
 
 int write_file_codification(Huff_table *ht, FILE *file, int size_tree){
-	printf("\n");
 	int i;
 	//file_string é a variável global que armazena o arquivo lido
 	int bit_index = 7;
 	unsigned char bit = 0;
 	List *temp = NULL;
-	int finish_last_bit = 1;
 	for(i = 0; i < strlen(file_string); i++){
-		if(!finish_last_bit){
-			i--;
-			finish_last_bit = 1;
-		}
 		unsigned char aux = file_string[i];
 		//Começa a partir do primeiro elemento da lista na huff_table na posição do char lido na string
 		temp = ht->table[aux]->first;
-		while(temp != NULL && bit_index > 0){
+		while(temp != NULL){
+			if(bit_index == -1){
+				fprintf(file, "%c", bit);
+				bit = 0;
+				bit_index = 7;
+			}
 			if(temp->bit == '1'){
 				bit = set_bit(bit, bit_index);
-				printf("1");
-			}else{
-				printf("0");
 			}
 			bit_index--;
 			temp = temp->Next;
 		}
-		if(bit_index == 0){
-			fprintf(file, "%c", bit);
-			bit = 0;
-			bit_index = 7;
-			finish_last_bit = 1;
-		}else if(temp == NULL && i != strlen(file_string)-1){
-			finish_last_bit = 1;
-		}else if(temp == NULL && i == strlen(file_string)-1){
-			fprintf(file, "%c", bit);
-			finish_last_bit = 1;
-		}else{
-			finish_last_bit = 0;
-		}
+	}
+	if(bit_index < 7){
+		fprintf(file, "%c", bit);
 	}
 	return bit_index;
 }
@@ -281,7 +267,6 @@ void decompress(char* source_file_name, char* dest_file_name){
 
 	unsigned int bit_cur = 0;
 	Node* root_aux = root_huff;
-	printf("%d\n", (total_bytes-(size_tree+2))-1);
 	//comecando a ir de bit em bit buscando uma folha na arvore
 	for(i = 0; i < (total_bytes-(size_tree+2))-1; i++){
 		bit_cur = fgetc(source_file);
@@ -307,7 +292,6 @@ void decompress(char* source_file_name, char* dest_file_name){
 			root_aux = root_aux->m_left;
 		}
 		if(is_leaf(root_aux)){
-			printf("%c\n",root_aux->m_data );
 			fprintf(dest_file, "%c", root_aux->m_data);
 			root_aux = root_huff;
 		}
