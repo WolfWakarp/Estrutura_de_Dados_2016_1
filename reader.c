@@ -1,7 +1,7 @@
 #include "reader.h"
 
 int FreqCounter[256] = {0};
-unsigned char file_string[100000] = {0};
+unsigned char *file_string;
 
 void count_rep(char *file_name){
 	FILE *file = fopen(file_name, "rb");
@@ -22,6 +22,9 @@ void store_string(char *fileName){
 
 	int i = 0;
 	int c;
+	fseek(file, 0, SEEK_END);
+	int total_bytes = ftell(file);
+	file_string = (char*)malloc(sizeof(char)*total_bytes);
 	if(file == NULL) printf("Empty File!\n");
 	else{
 		while((c=fgetc(file))){

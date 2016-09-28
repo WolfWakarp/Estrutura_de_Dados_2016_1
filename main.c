@@ -33,8 +33,8 @@ int main(int argc, char* args[]){
 
 		//count_rep(source_file_name);
 		//store_string(source_file_name);
-		count_rep("teste.txt");
-		store_string("teste.txt");
+		count_rep("EstratégiasemumNovoParadigmaGlobalizado.html");
+		store_string("EstratégiasemumNovoParadigmaGlobalizado.html");
 
 		DEBUG printf("Quantidade de elementos no arquivo: %d\n", strlen(file_string));
 		DEBUG printf("Arquivo: %s\n", file_string);
