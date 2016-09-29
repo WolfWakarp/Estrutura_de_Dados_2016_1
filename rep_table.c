@@ -10,6 +10,14 @@ Huff_table* create_huff_table(){
 }
 
 void build_representations(Node *tree, unsigned char *bit_string, int index, unsigned char bit, Huff_table *ht){
+	if(index == -1 && is_leaf(tree)){
+	    Element *newElement = (Element*) malloc(sizeof(Element));
+		newElement->size = index + 1;
+		newElement->first = NULL;
+		ht->table[tree->m_data] = newElement;
+		ht->table[tree->m_data]->first = insert_in_list(ht->table[tree->m_data]->first, '0');
+		return;
+	}
 	if(index > -1){ //Se estiver em -1 foi a primeira chamada da função, portanto tree ainda é a raiz da árvore
 		bit_string[index] = bit; //vai sempre salvando o bit passado na pos correta da string
 
@@ -29,8 +37,8 @@ void build_representations(Node *tree, unsigned char *bit_string, int index, uns
 	}
 	//As chamadas recursivas vão para esquerda ou para direita, passando respectivamente 0 ou 1 como bits
 	//e incrementando o index para avançar na string, quando for feito o backtrack o index volta para o anterior
-	build_representations(tree->m_left, bit_string, index + 1, '0', ht);
-	build_representations(tree->m_right, bit_string, index + 1, '1', ht);
+	if(tree->m_left != NULL) build_representations(tree->m_left, bit_string, index + 1, '0', ht);
+	if(tree->m_right != NULL) build_representations(tree->m_right, bit_string, index + 1, '1', ht);
 	return;
 }
 

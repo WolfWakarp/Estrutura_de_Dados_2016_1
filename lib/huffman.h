@@ -189,9 +189,10 @@ int write_file_codification(Huff_table *ht, FILE *file, int size_tree){
 			temp = temp->Next;
 		}
 	}
-	if(bit_index < 7){
+	if(bit_index <= 7){
 		fprintf(file, "%c", bit);
 	}
+	bit_index++;
 	return bit_index;
 }
 
