@@ -81,24 +81,35 @@ int size_huff_tree(Node* huff){
 	return (size_huff_tree(huff->m_right)) + (size_huff_tree(huff->m_left)) + 1;
 }
 
+int count_escapes(Node* huff, int escapes){
+  if(huff != NULL){
+    if((huff->m_data == '*' || huff->m_data == '\\') && is_leaf(huff)){
+      ++escapes;
+    }
+		escapes = count_escapes(huff->m_left, escapes);
+		escapes = count_escapes(huff->m_right, escapes);
+	}
+  return escapes;
+}
 
 void print_tree_header(FILE* file, Node* huff){
-	if(huff != NULL){
-		fprintf(file, "%c", huff->m_data);
+  if(huff != NULL){
+    if((huff->m_data == '*' || huff->m_data == '\\') && is_leaf(huff)){
+      fprintf(file, "\\%c", huff->m_data);
+    } else {
+      fprintf(file, "%c", huff->m_data);
+    }
 		print_tree_header(file, huff->m_left);
 		print_tree_header(file, huff->m_right);
 	}
 }
 
 int print_header(FILE* file, Node* huff){
-
 	if(file == NULL){
 		printf("Erro ao abrir arquivo.\n");
 		return -1;
 	}
-
-	unsigned int size_tree = size_huff_tree(huff);
-
+	unsigned int size_tree = count_escapes(huff, 0) + size_huff_tree(huff);
 	if(size_tree > 8191){
 		printf("Erro: numero de nos maior que o suportado pelo huffman\n");
 		return -1;
@@ -218,7 +229,7 @@ void compress(char *dest_file_name, Huff_table *huff_table, Node* huffman_tree){
 	print_header(dest_file, huffman_tree);
 	print_huff_tree(huffman_tree);
 	unsigned int size_trash = write_file_codification(huff_table, dest_file, size_huff_tree(huffman_tree));
-	
+
 	print_trash_header(size_trash, dest_file);
 }
 
@@ -258,7 +269,7 @@ void decompress(char* source_file_name, char* dest_file_name){
 	Node* root_huff = make_tree(&s, &pos);
 
 	printf("\n"); print_huff_tree(root_huff);
-	printf("\n"); 
+	printf("\n");
 	DEBUG printf("Quantidade de bytes escritos: %ld\n", total_bytes);
 	printf("Tamanho da arvore: %d\n", size_tree);
 	printf("Trash size: %d\n", size_trash);
