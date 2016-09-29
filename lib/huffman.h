@@ -259,7 +259,7 @@ void decompress(char* source_file_name, char* dest_file_name){
 
 	printf("\n"); print_huff_tree(root_huff);
 	printf("\n"); 
-	DEBUG printf("Quantidade de bytes escritos: %ld\n", total_bytes);
+	printf("Quantidade de bytes escritos: %ld\n", total_bytes);
 	printf("Tamanho da arvore: %d\n", size_tree);
 	printf("Trash size: %d\n", size_trash);
 
@@ -267,9 +267,11 @@ void decompress(char* source_file_name, char* dest_file_name){
 
 	unsigned int bit_cur = 0;
 	Node* root_aux = root_huff;
+
+	printf("%d\n", (total_bytes-(size_tree+2)));
 	//comecando a ir de bit em bit buscando uma folha na arvore
 	for(i = 0; i < (total_bytes-(size_tree+2))-1; i++){
-		bit_cur = fgetc(source_file);
+		bit_cur = getc(source_file);
 		for(j = 7; j >= 0; j--){
 			if(is_bit_i_set(bit_cur, j)){
 				root_aux = root_aux->m_right;
@@ -284,8 +286,8 @@ void decompress(char* source_file_name, char* dest_file_name){
 	}
 
 	//ultimo byte (trabalhado com o lixo)
-	bit_cur = fgetc(source_file);
-	for(j = 7; j >= trash_size; j--){
+	bit_cur = getc(source_file);
+	for(j = 7; j >= size_trash; j--){
 		if(is_bit_i_set(bit_cur, j)){
 			root_aux = root_aux->m_right;
 		}else{
