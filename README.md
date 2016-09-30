@@ -10,5 +10,5 @@ Victor Accete
 
 Para compilar, execute ./compile.sh  
 
-**Uso**
+**Uso**  
 ./main [c]omprimir|[d]escomprimir nome_arquivo [arquivo_saida]  
