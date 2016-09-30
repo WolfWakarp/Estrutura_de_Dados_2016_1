@@ -2,6 +2,7 @@
 #include "rep_table.h"
 #include "lib/huffman.h"
 #include "lib/util.h"
+#include <sys/stat.h>
 
 int main(int argc, char* args[]){
 
@@ -13,13 +14,30 @@ int main(int argc, char* args[]){
 	char *source_file_name = args[2];
 	char *dest_file_name;
 
+	struct stat st;
+
+	if (stat(source_file_name, &st) != 0) {
+	   return EXIT_FAILURE;
+	}
+
+	if(st.st_size <= 1){
+        printf("Arquivo vazio\n");
+        exit(1);
+ 	}	
+
 	if(args[1][0] != 'c' && args[1][0] != 'd'){
 		printf("parametro incorreto\n");
 		printf("uso: %s [c]omprimir|[d]escomprimir nome_arquivo [arquivo_saida]\n", args[0]);
 		exit(1);
 	}
 
-	if(argc == 4){
+	if(argc == 4 && args[1][0] == 'c'){
+		dest_file_name = args[3];
+		if(!has_huff_extension(dest_file_name, strlen(dest_file_name))){
+			printf("arquivo de destino precisa ter extensao .huff\n");
+			exit(0);
+		}
+	}else if(argc == 4 && args[1][0] == 'd'){
 		dest_file_name = args[3];
 	}else if(args[1][0] == 'd'){
 		dest_file_name = (char *) malloc(sizeof(char *) * strlen(args[2]));
@@ -36,8 +54,9 @@ int main(int argc, char* args[]){
 		dest_file_name[strlen(source_file_name)+3] = 'f';
 		dest_file_name[strlen(source_file_name)+4] = 'f';
 		dest_file_name[strlen(source_file_name)+5] = '\0';
-		printf("%s\n", dest_file_name);
 	}
+
+	printf("%s\n", dest_file_name);
 
 	if(args[1][0] == 'c'){
 
@@ -93,5 +112,6 @@ int main(int argc, char* args[]){
 	}else{
 		decompress(source_file_name, dest_file_name);
 	}
+	
 	return 0;
 }
