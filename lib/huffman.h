@@ -110,6 +110,12 @@ int print_header(FILE* file, Node* huff){
 		return -1;
 	}
 	unsigned int size_tree = count_escapes(huff, 0) + size_huff_tree(huff);
+	
+	//Note que:
+	//Se considerarmos o lixo com tamanho 0 e a arvore totalmente preenchida em binario, teremos
+	//0001 1111 1111 1111
+	//que corresponde a 8191 em decimal, assim precisamos garantir que o tamanho da arvore nao ultrapassara este valor.
+	
 	if(size_tree > 8191){
 		printf("Erro: numero de nos maior que o suportado pelo huffman\n");
 		return -1;
@@ -121,7 +127,8 @@ int print_header(FILE* file, Node* huff){
 	//dividindo o size_tree em dois bytes
 	//como sei que o máximo será 13bits (8191 em decimal)
 	//posso utitlizar operações shift para pegar os 8 bit de cada lado
-	unsigned char first_byte = (size_tree>>8);
+	
+	unsigned char first_byte = (size_tree >> 8);
 	unsigned char second_byte = size_tree;
 
 	//como o número máximo da trash será composto por 3 bits, desloco eles 5 vezes
@@ -166,14 +173,14 @@ void print_huff_tree(Node* huff){
 	}
 }
 
-int write_file_codification(Huff_table *ht, FILE *file, int size_tree){
+int write_file_codification(Huff_table *ht, FILE *file, int size_tree, FILE *source_file){
 	int i;
 	//file_string é a variável global que armazena o arquivo lido
 	int bit_index = 7;
 	unsigned char bit = 0;
+	unsigned int aux;
 	List *temp = NULL;
-	for(i = 0; i < strlen(file_string); i++){
-		unsigned char aux = file_string[i];
+	while((aux = getc(source_file)) != EOF){
 		//Começa a partir do primeiro elemento da lista na huff_table na posição do char lido na string
 		temp = ht->table[aux]->first;
 		while(temp != NULL){
@@ -220,8 +227,9 @@ void print_trash_header(unsigned int size, FILE* file){
 	fprintf(file, "%c", w);
 }
 
-void compress(char *dest_file_name, Huff_table *huff_table, Node* huffman_tree){
+void compress(char *dest_file_name, Huff_table *huff_table, Node* huffman_tree, char* source_file_name){
 	FILE* dest_file = fopen(dest_file_name, "wb+");
+	FILE* source_file = fopen(source_file_name, "rb");
 	if(dest_file == NULL){
 		printf("Erro ao abrir arquivo de destino para escrita\n");
 		return;
@@ -229,15 +237,15 @@ void compress(char *dest_file_name, Huff_table *huff_table, Node* huffman_tree){
 	printf("\n");
 	print_header(dest_file, huffman_tree);
 	print_huff_tree(huffman_tree);
-	unsigned int size_trash = write_file_codification(huff_table, dest_file, size_huff_tree(huffman_tree));
+	unsigned int size_trash = write_file_codification(huff_table, dest_file, size_huff_tree(huffman_tree), source_file);
 
 	print_trash_header(size_trash, dest_file);
 }
 
 void decompress(char* source_file_name, char* dest_file_name){
 
-	FILE* source_file = fopen(source_file_name, "r");
-	FILE* dest_file = fopen(dest_file_name, "w+");
+	FILE* source_file = fopen(source_file_name, "rb");
+	FILE* dest_file = fopen(dest_file_name, "wb+");
 
 	if(source_file == NULL){
 		printf("Erro ao abrir arquivo %s para leitura\n", source_file_name);
@@ -262,7 +270,7 @@ void decompress(char* source_file_name, char* dest_file_name){
 
 	for(i = 2, pos = 0; i < size_tree+2; i++, pos++){
 		fseek(source_file, i, SEEK_SET);
-		s[pos] = fgetc(source_file);
+		s[pos] = getc(source_file);
 	}
 	s[pos] = '\0';
 	pos = 0;

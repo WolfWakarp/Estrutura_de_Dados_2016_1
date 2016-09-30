@@ -5,7 +5,6 @@
 #define DEBUG if(0)
 
 extern int FreqCounter[256];
-extern unsigned char *file_string;
 
 void count_rep(char *fileName);
 
