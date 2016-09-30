@@ -6,7 +6,7 @@ unsigned char *file_string;
 void count_rep(char *file_name){
 	FILE *file = fopen(file_name, "rb");
 
-	int c; //auxiliar para guardar o caractere
+	unsigned int c; //auxiliar para guardar o caractere
 	if(file == NULL) printf("Empty File!\n");
 	else{
 		while((c=fgetc(file))){
@@ -32,11 +32,11 @@ void store_string(char *fileName){
 	fseek(file, 0, SEEK_SET);
 
 	while((c=fgetc(file))){
-		if(c == EOF){ 
+		if(c == EOF){
 			break; //encerrar caso o arquivo esteja no fim
 		}else{
 			file_string[i] = c;
-			i++;	
+			i++;
 		}
 	}
 	file_string[i] = '\0';
