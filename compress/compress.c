@@ -26,11 +26,6 @@ void printFrequency(int array[256]){
 	}
 }
 
-int set_bit(unsigned char c, int i){
-	unsigned char mask = 1 << i;
-	return mask | c;
-}
-
 int size_huff_tree(Node* huff){
 	if(huff == NULL) return 0;
 	return (size_huff_tree(huff->m_right)) + (size_huff_tree(huff->m_left)) + 1;

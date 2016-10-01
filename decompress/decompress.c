@@ -1,31 +1,4 @@
-#pragma once
-#include <stdio.h>
-#include "../compress/rep_table.h"
-
-// reconstroi a árvore de huffman a partir da árvore em pre-order lida no .huff
-Node* make_tree(char* s, int* pos);
-
-// verifica se o bit 1 está setado (definido) na posicao i
-int is_bit_i_set(unsigned char c, int i);
-
-// pega o tamanho do lixo lendo o .huff
-int trash_size(FILE* file);
-
-// pega o tamanho da árvore lendo o .huff
-int tree_size(FILE* file);
-
-// descomprime o huffman
-void decompress(char* source_file_name, char* dest_file_name);
-
-//thanks to http://stackoverflow.com/questions/111928/is-there-a-printf-converter-to-print-in-binary-format
-void print_binary(int number){
-    if (number) {
-        print_binary(number >> 1);
-        putc((number & 1) ? '1' : '0', stdout);
-    }else{
-	    printf("\n");
-    }
-}
+#include "decompress.h"
 
 Node* make_tree(char* s, int* pos){
 	if(s[*pos] == '*'){
@@ -41,12 +14,7 @@ Node* make_tree(char* s, int* pos){
 	return create(s[*pos], NULL, NULL);
 }
 
-int is_bit_i_set(unsigned char c, int i){
-	unsigned char mask = 1 << i;
-	return mask & c;
-}
-
-int tree_size(FILE* file){
+int get_tree_size(FILE* file){
 	fseek(file, 0, SEEK_SET);
 
 	unsigned char first_byte = getc(file);
@@ -60,7 +28,7 @@ int tree_size(FILE* file){
 	return size;
 }
 
-int trash_size(FILE* file){
+int get_trash_size(FILE* file){
 	fseek(file, 0, SEEK_SET);
 	unsigned char first_byte = getc(file);
 
@@ -88,8 +56,8 @@ void decompress(char* source_file_name, char* dest_file_name){
 
 	int total_bytes = ftell(source_file);
 	DEBUG printf("%d\n", total_bytes);
-	int size_tree = tree_size(source_file);
-	int size_trash = trash_size(source_file);
+	int size_tree = get_tree_size(source_file);
+	int size_trash = get_trash_size(source_file);
 
 	char s[size_tree+1];
 
