@@ -18,20 +18,18 @@ Node* create_priority_queue();
 
 int is_empty(Node *node);
 
-//Inser��o padr�o de uma fila de prioridade, se o elemento inserido for igual a um
-//elemento na lista, o novo elemento ficar� posicionado ANTES do elemento antigo
-Node* insert(Node *node, unsigned char data, int frequency);
+//Cria um nó pra inserir usando o insert_node
+Node* insert(Node *queue, unsigned char data, int frequency);
 
-//Inser��o padr�o de uma fila de prioridade, obecendo as mesmas regras do insert normal
-//por�m esse insere um node inteiro, e n�o itens de um node, como a fun��o acima
+//Inserção padrão de uma fila de prioridade, o nó com menor frequência fica na frente
 Node *insert_node(Node *queue, Node *inserted_node);
 
 void print_priority_queue(Node *node);
 
 /* Cria um novo node e faz com que o primeiro da fila de prioridade seja o filho
- * � esquerda e com que o segundo seja o filho � direita
- * esse node vai ter como caractere o * e sua frequ�ncia vai ser a soma da
- * frequ�ncia dos filhos, e ent�o ele � inserido novamente na fila
+ * à esquerda e com que o segundo seja o filho à direita
+ * esse node vai ter como caractere o * e sua frequência vai ser a soma da
+ * frequência dos filhos, e então ele é inserido novamente na fila
  */
 Node *merge_nodes(Node* queue);
 

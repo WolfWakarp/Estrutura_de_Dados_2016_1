@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include "../compress/rep_table.h"
 
+//cria um node para inserir na árvore, usando na reconstrução (make_tree)
+Node* create(char value, Node* left, Node* right);
+
 // reconstroi a árvore de huffman a partir da árvore em pre-order lida no .huff
 Node* make_tree(char* s, int* pos);
 

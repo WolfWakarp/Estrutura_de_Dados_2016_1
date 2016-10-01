@@ -1,5 +1,13 @@
 #include "decompress.h"
 
+Node* create(char value, Node* left, Node* right){
+	Node* new_node = (Node*) malloc(sizeof(Node));
+	new_node->m_data = value;
+	new_node->m_left = left;
+	new_node->m_right = right;
+	return new_node;
+}
+
 Node* make_tree(char* s, int* pos){
 	if(s[*pos] == '*'){
 		*pos = *pos+1;

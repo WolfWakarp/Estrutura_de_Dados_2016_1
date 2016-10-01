@@ -8,55 +8,36 @@ int is_empty(Node *node){
 	return ((node == NULL) ? 1 : 0);
 }
 
-Node* insert(Node *node, unsigned char data, int frequency){
-	if((node == NULL) || (frequency <= node->m_frequency)){
-		Node *newNode = (Node*) malloc(sizeof(Node));
-		newNode->m_data = data;
-		newNode->m_frequency = frequency;
-		newNode->m_left = NULL;
-		newNode->m_right = NULL;
-		newNode->Next = node;
-		return newNode;
-	}
-	else{
-		Node *temp = node;
-		Node *newNode = (Node*) malloc(sizeof(Node));
+Node* insert(Node *queue, unsigned char data, int frequency){
+  Node *newNode = (Node*) malloc(sizeof(Node));
+  newNode->m_data = data;
+  newNode->m_frequency = frequency;
+  newNode->m_left = NULL;
+  newNode->m_right = NULL;
+  newNode->Next = NULL;
 
-		while(temp->Next != NULL && frequency > temp->Next->m_frequency){
-		        temp = temp->Next;
-		}
-
-		newNode->Next = temp->Next;
-		newNode->m_data = data;
-		newNode->m_frequency = frequency;
-		newNode->m_left = NULL;
-		newNode->m_right = NULL;
-		temp->Next = newNode;
-
-		return node;
-	}
+  queue = insert_node(queue, newNode);
+  return queue;
 }
 
-Node *insert_node(Node *node, Node *inserted){
-	if(node == inserted){
+Node *insert_node(Node *queue, Node *inserted){
+	if(queue == inserted){
 		inserted->Next = NULL;
 		return inserted;
 	}
-	else if((node == NULL) || (inserted->m_frequency <= node->m_frequency)){
-			inserted->Next = node;
+	else if((queue == NULL) || (inserted->m_frequency <= queue->m_frequency)){
+			inserted->Next = queue;
 			return inserted;
 		}
 	else{
-		Node *temp = node;
-
+		Node *temp = queue;
 		while(temp->Next != NULL && inserted->m_frequency > temp->Next->m_frequency){
 		        temp = temp->Next;
 		}
-
 		inserted->Next = temp->Next;
 		temp->Next = inserted;
 
-		return node;
+		return queue;
 	}
 }
 
@@ -67,14 +48,6 @@ void print_priority_queue(Node *node){
 	for(temp = node; temp != NULL; temp = temp->Next){
 		printf("Char: %c  Rep: %d | ", temp->m_data, temp->m_frequency);
 	}
-}
-
-Node* create(char value, Node* left, Node* right){
-	Node* new_node = (Node*) malloc(sizeof(Node));
-	new_node->m_data = value;
-	new_node->m_left = left;
-	new_node->m_right = right;
-	return new_node;
 }
 
 Node *merge_nodes(Node* queue){
