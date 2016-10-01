@@ -1,10 +1,6 @@
 #pragma once
 #include <stdio.h>
-#include "../compress/queue_and_tree.h"
 #include "../compress/rep_table.h"
-
-// cria um nó na arvore
-Node* create(char value, Node* left, Node* right);
 
 // reconstroi a árvore de huffman
 Node* make_tree(char* s, int* pos);
@@ -27,9 +23,6 @@ int trash_size(FILE* file);
 // pega o tamanho da árvore
 int tree_size(FILE* file);
 
-// imprime a àrvore de huffman
-void print_huff_tree(Node* huff);
-
 // descomprime o huffman
 void decompress(char* source_file_name, char* dest_file_name);
 
@@ -42,14 +35,6 @@ void print_binary(int number)
     }else{
 	    printf("\n");
     }
-}
-
-Node* create(char value, Node* left, Node* right){
-	Node* new_node = (Node*) malloc(sizeof(Node));
-	new_node->m_data = value;
-	new_node->m_left = left;
-	new_node->m_right = right;
-	return new_node;
 }
 
 Node* make_tree(char* s, int* pos){
@@ -163,14 +148,6 @@ int tree_size(FILE* file){
 	int size = (first_byte << 8) | second_byte;
 
 	return size;
-}
-
-void print_huff_tree(Node* huff){
-	if(huff != NULL){
-		printf("%c", huff->m_data);
-		print_huff_tree(huff->m_left);
-		print_huff_tree(huff->m_right);
-	}
 }
 
 int write_file_codification(Huff_table *ht, FILE *file, int size_tree, FILE *source_file){

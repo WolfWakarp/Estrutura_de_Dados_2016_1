@@ -69,6 +69,14 @@ void print_priority_queue(Node *node){
 	}
 }
 
+Node* create(char value, Node* left, Node* right){
+	Node* new_node = (Node*) malloc(sizeof(Node));
+	new_node->m_data = value;
+	new_node->m_left = left;
+	new_node->m_right = right;
+	return new_node;
+}
+
 Node *merge_nodes(Node* queue){
 	//criando o node e definindo seus filhos
 	Node *newNode = (Node*) malloc(sizeof(Node));
@@ -124,4 +132,12 @@ Node* create_empty_tree() {
 
 int is_leaf(Node *tree){
 	return (tree->m_left == NULL && tree->m_right == NULL);
+}
+
+void print_huff_tree(Node* huff){
+	if(huff != NULL){
+		printf("%c", huff->m_data);
+		print_huff_tree(huff->m_left);
+		print_huff_tree(huff->m_right);
+	}
 }

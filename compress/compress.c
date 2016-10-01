@@ -1,4 +1,4 @@
-#include "reader.h"
+#include "compress.h"
 
 int FreqCounter[256] = {0};
 unsigned char *file_string;

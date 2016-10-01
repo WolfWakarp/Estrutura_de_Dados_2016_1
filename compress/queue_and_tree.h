@@ -1,5 +1,5 @@
 #pragma once
-#include "reader.h"
+#include "compress.h"
 
 typedef struct node Node;
 struct node{
@@ -24,7 +24,6 @@ Node *insert_node(Node *queue, Node *inserted_node);
 
 void print_priority_queue(Node *node);
 
-
 /* Cria um novo node e faz com que o primeiro da fila de prioridade seja o filho
  * � esquerda e com que o segundo seja o filho � direita
  * esse node vai ter como caractere o * e sua frequ�ncia vai ser a soma da
@@ -45,3 +44,6 @@ Node *convert_list_to_tree(Node *list);
 Node* create_empty_tree();
 
 int is_leaf(Node *tree);
+
+// imprime a àrvore de huffman
+void print_huff_tree(Node* huff);

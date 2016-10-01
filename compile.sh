@@ -1,1 +1,1 @@
-gcc encoding_tree.c encoding_tree.h main.c priority_queue.c priority_queue.h reader.c reader.h rep_table.h rep_table.c ./lib/util.h ./lib/huffman.h -std=c11 -w -o main
+gcc ./compress/queue_and_tree.c ./compress/queue_and_tree.h main.c ./compress/compress.c ./compress/compress.h ./compress/rep_table.h ./compress/rep_table.c ./decompress/util.h ./decompress/huffman.h -std=c11 -w -o main
