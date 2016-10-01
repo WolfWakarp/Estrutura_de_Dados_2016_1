@@ -1,5 +1,9 @@
 #pragma once
-#include "compress.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+#define DEBUG if(0)
 
 typedef struct node Node;
 struct node{

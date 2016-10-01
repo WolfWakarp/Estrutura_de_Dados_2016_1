@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-#define DEBUG if(0)
+#include "queue_and_tree.h"
 
 extern int FreqCounter[256];
 

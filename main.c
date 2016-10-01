@@ -1,5 +1,6 @@
 #include <string.h>
 #include "compress/rep_table.h"
+#include "compress/compress.h"
 #include "decompress/huffman.h"
 #include "decompress/util.h"
 #include <sys/stat.h>
