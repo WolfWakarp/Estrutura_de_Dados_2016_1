@@ -1,7 +1,7 @@
 #pragma once
 #include <stdio.h>
-#include "../encoding_tree.h"
-#include "../rep_table.h"
+#include "../compress/queue_and_tree.h"
+#include "../compress/rep_table.h"
 
 // cria um nó na arvore
 Node* create(char value, Node* left, Node* right);
@@ -110,12 +110,12 @@ int print_header(FILE* file, Node* huff){
 		return -1;
 	}
 	unsigned int size_tree = count_escapes(huff, 0) + size_huff_tree(huff);
-	
+
 	//Note que:
 	//Se considerarmos o lixo com tamanho 0 e a arvore totalmente preenchida em binario, teremos
 	//0001 1111 1111 1111
 	//que corresponde a 8191 em decimal, assim precisamos garantir que o tamanho da arvore nao ultrapassara este valor.
-	
+
 	if(size_tree > 8191){
 		printf("Erro: numero de nos maior que o suportado pelo huffman\n");
 		return -1;
@@ -127,7 +127,7 @@ int print_header(FILE* file, Node* huff){
 	//dividindo o size_tree em dois bytes
 	//como sei que o máximo será 13bits (8191 em decimal)
 	//posso utitlizar operações shift para pegar os 8 bit de cada lado
-	
+
 	unsigned char first_byte = (size_tree >> 8);
 	unsigned char second_byte = size_tree;
 
@@ -278,7 +278,7 @@ void decompress(char* source_file_name, char* dest_file_name){
 	Node* root_huff = make_tree(&s, &pos);
 
 	printf("\n"); print_huff_tree(root_huff);
-	printf("\n"); 
+	printf("\n");
 	printf("Quantidade de bytes escritos: %ld\n", total_bytes);
 	printf("Tamanho da arvore: %d\n", size_tree);
 	printf("Trash size: %d\n", size_trash);

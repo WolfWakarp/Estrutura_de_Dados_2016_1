@@ -1,7 +1,7 @@
 #include <string.h>
-#include "rep_table.h"
-#include "lib/huffman.h"
-#include "lib/util.h"
+#include "compress/rep_table.h"
+#include "decompress/huffman.h"
+#include "decompress/util.h"
 #include <sys/stat.h>
 
 int main(int argc, char* args[]){
@@ -23,7 +23,7 @@ int main(int argc, char* args[]){
 	if(st.st_size < 1){
         printf("Arquivo vazio\n");
         exit(1);
- 	}	
+ 	}
 
 	if(args[1][0] != 'c' && args[1][0] != 'd'){
 		printf("parametro incorreto\n");
@@ -61,27 +61,27 @@ int main(int argc, char* args[]){
 	if(args[1][0] == 'c'){
 
 		count_rep(source_file_name);
-		
+
 		DEBUG printFrequency(FreqCounter);
 
 		//Fila de prioridade que vai gerar a árvore de huffman
 		Node* p_queue = create_priority_queue();
-		
+
 		//Arvore de huffman
 		Node* huffman_tree = create_empty_tree();
-		
+
 		//Tabela de huffman, que guarda a cod de cada char
 		Huff_table* huffman_table = create_huff_table();
 
 		int i;
-		
+
 		//Inserindo todos os elementos que aparecem pelo menos uma vez na fila de prioridade
 		for(i = 0; i < 256; i++){
 			if(FreqCounter[i] > 0) {
 				p_queue = insert(p_queue, i, FreqCounter[i]);
 			}
 		}
-		
+
 		DEBUG printf("Fila: ");
 		DEBUG print_priority_queue(p_queue);
 
@@ -108,9 +108,9 @@ int main(int argc, char* args[]){
 
 		DEBUG printf("\n\nEnd of running.");
 	}else{
-	
+
 		decompress(source_file_name, dest_file_name);
-	
+
 	}
 
 	return 0;

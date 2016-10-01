@@ -1,5 +1,5 @@
 #pragma once
-#include "encoding_tree.h"
+#include "queue_and_tree.h"
 
 
 //Node da lista que vai guardar cada bit
