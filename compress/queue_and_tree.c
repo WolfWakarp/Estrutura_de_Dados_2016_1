@@ -8,6 +8,7 @@ int is_empty(Node *node){
 	return ((node == NULL) ? 1 : 0);
 }
 
+//chamada na main.c
 Node* insert(Node *queue, unsigned char data, int frequency){
   Node *newNode = (Node*) malloc(sizeof(Node));
   newNode->m_data = data;
@@ -25,7 +26,7 @@ Node *insert_node(Node *queue, Node *inserted){
 		inserted->Next = NULL;
 		return inserted;
 	}
-	else if((queue == NULL) || (inserted->m_frequency <= queue->m_frequency)){
+  else if((queue == NULL) || (inserted->m_frequency <= queue->m_frequency)){
 			inserted->Next = queue;
 			return inserted;
 		}
