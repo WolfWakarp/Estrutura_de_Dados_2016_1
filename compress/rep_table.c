@@ -10,13 +10,6 @@ Huff_table* create_huff_table(){
 }
 
 void build_representations(Node *tree, unsigned char *bit_string, int index, unsigned char bit, Huff_table *ht){
-	if(index == -1 && is_leaf(tree)){
-	  Element *newElement = (Element*) malloc(sizeof(Element));
-		newElement->first = NULL;
-		ht->table[tree->m_data] = newElement;
-		ht->table[tree->m_data]->first = insert_in_list(ht->table[tree->m_data]->first, '0');
-		return;
-	}
 	if(index > -1){ //Se estiver em -1 foi a primeira chamada da função, portanto tree ainda é a raiz da árvore
 		bit_string[index] = bit; //vai sempre salvando o bit passado na pos correta da string
 

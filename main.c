@@ -91,7 +91,7 @@ int main(int argc, char* args[]){
 
 		unsigned char bit_string[256];
 		build_representations(huffman_tree, bit_string, -1, '0', huffman_table);
-		print_all_reps(huffman_table);
+		DEBUG print_all_reps(huffman_table);
 
 		compress(dest_file_name, huffman_table, huffman_tree, source_file_name);
 		end = clock();
