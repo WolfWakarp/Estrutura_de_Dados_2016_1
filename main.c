@@ -4,9 +4,11 @@
 #include "decompress/decompress.h"
 #include "decompress/util.h"
 #include <sys/stat.h>
+#include <time.h>
 
 int main(int argc, char* args[]){
-
+	clock_t start, end;
+	float time_taken;
 	if(argc < 3){
 		printf("uso: %s [c]omprimir|[d]escomprimir nome_arquivo [arquivo_saida]\n", args[0]);
 		exit(1);
@@ -60,6 +62,7 @@ int main(int argc, char* args[]){
 	printf("%s\n", dest_file_name);
 
 	if(args[1][0] == 'c'){
+		start = clock();
 		count_rep(source_file_name);
 
 		//Fila de prioridade que vai gerar a árvore de huffman
@@ -87,11 +90,16 @@ int main(int argc, char* args[]){
 		print_all_reps(huffman_table);
 
 		compress(dest_file_name, huffman_table, huffman_tree, source_file_name);
-
-		printf("\n\nCompression finished :)\n");
+		end = clock();
+		time_taken = ((double) (end - start)) / CLOCKS_PER_SEC;
+		printf("\n\nCompression finished :)\n\nTime for compression: %.3f s", time_taken);
 	}
 	else{
+		start = clock();
 		decompress(source_file_name, dest_file_name);
+		end = clock();
+		time_taken = ((double) (end - start)) / CLOCKS_PER_SEC;
+		printf("\n\nDecompression finished :)\n\nTime for decompression: %.3f s", time_taken);
 	}
 
 	return 0;
