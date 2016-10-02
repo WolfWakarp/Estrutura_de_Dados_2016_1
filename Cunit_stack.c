@@ -3,9 +3,10 @@
 #include "stack.h"
 #include <CUnit/CUnit.h>
 #include <CUnit/Basic.h>
-Stack *stack;
 void stack_test() 
 {
+	Stack *stack;
+	stack = create_stack();
   // Check if first param matches with second[2]
 	push(stack, 1);
 	push(stack, 2);
@@ -18,7 +19,6 @@ void stack_test()
 }
 int main()
 {
-	stack = create_stack();
 	//iniciar o CUnit é necessário sempre iniciar antes de qualquer coisa com o CUnit
 	if (CUE_SUCCESS != CU_initialize_registry()) return CU_get_error();
 
