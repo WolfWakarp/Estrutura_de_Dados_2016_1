@@ -11,8 +11,7 @@ Huff_table* create_huff_table(){
 
 void build_representations(Node *tree, unsigned char *bit_string, int index, unsigned char bit, Huff_table *ht){
 	if(index == -1 && is_leaf(tree)){
-	    Element *newElement = (Element*) malloc(sizeof(Element));
-		newElement->size = index + 1;
+	  Element *newElement = (Element*) malloc(sizeof(Element));
 		newElement->first = NULL;
 		ht->table[tree->m_data] = newElement;
 		ht->table[tree->m_data]->first = insert_in_list(ht->table[tree->m_data]->first, '0');
@@ -23,7 +22,6 @@ void build_representations(Node *tree, unsigned char *bit_string, int index, uns
 
 		if(is_leaf(tree)){
 			Element *newElement = (Element*) malloc(sizeof(Element));
-			newElement->size = index + 1;
 			newElement->first = NULL;
 			ht->table[tree->m_data] = newElement;
 
@@ -70,12 +68,4 @@ void print_linked_list(List *node){
 	if(node == NULL) return;
 	printf("%c", node->bit);
 	print_linked_list(node->Next);
-}
-
-
-
-int count_trash_size(char* file_codification){
-	unsigned int size = strlen(file_codification); //pega o tamanho da codificação
-	unsigned int rest = size%8; //retorna um inteiro com o resto da divisão por 8, que é o tamanho do lixo
-	return (8-rest);
 }

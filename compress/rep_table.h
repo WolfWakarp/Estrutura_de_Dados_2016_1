@@ -12,7 +12,6 @@ struct list{
 //Vai guardar a lista de bits de cada caractere
 typedef struct element Element;
 struct element{
-  int size;
   List *first;
 };
 
@@ -52,5 +51,3 @@ void print_all_reps(Huff_table *ht);
 
 //RECEBE uma lista List* e imprime recursivamente
 void print_linked_list(List *node);
-
-int count_trash_size(/*vai trabalhar em cima da variável global file_codification*/);
