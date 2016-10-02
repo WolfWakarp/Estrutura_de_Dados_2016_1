@@ -45,20 +45,20 @@ int count_escapes(Node* huff, int escapes){
 }
 
 void print_trash_header(unsigned int size, FILE* file){
-	fseek(file, 0, SEEK_SET);
+	//volta pra pos do byte 0arquivo
+	fseek(file, 0, SEEK_SET); //SEEK_SET faz comecar do inicio do arquivo
 
 	unsigned char first_byte = getc(file);
-	
-	unsigned char w = 0;
+	unsigned char new_first_byte = 0;
 
-	w =  (first_byte | (size << 5));
+	new_first_byte = (first_byte | (size << 5));
 
 	fseek(file, 0, SEEK_SET);
-	fprintf(file, "%c", w);
+	fprintf(file, "%c", new_first_byte);
 }
 
-int print_header(FILE* file, Node* huff){
-	if(file == NULL){
+int print_header(FILE* dest_file, Node* huff){
+	if(dest_file == NULL){
 		printf("Erro ao abrir arquivo.\n");
 		return -1;
 	}
@@ -76,7 +76,7 @@ int print_header(FILE* file, Node* huff){
 	//posteriormente será colocado o trash_size
 	unsigned char trash_size = 0;
 
-	//dividindo o size_tree em dois bytes
+	//dividindo o tree_size em dois bytes
 	//como sei que o máximo será 13bits (8191 em decimal)
 	//posso utitlizar operações shift para pegar os 8 bit de cada lado
 	unsigned char first_byte = (size_tree >> 8);
@@ -90,41 +90,41 @@ int print_header(FILE* file, Node* huff){
 
 	first_byte = (first_byte | trash_size);
 
-	fprintf(file, "%c", first_byte);
-	fprintf(file, "%c", second_byte);
+	fprintf(dest_file, "%c", first_byte);
+	fprintf(dest_file, "%c", second_byte);
 
-	print_tree_header(file, huff);
+	print_tree_header(dest_file, huff);
 
 	return 1;
 }
 
 int write_file_codification(Huff_table *ht, FILE *file, int size_tree, FILE *source_file){
-	int i;
-	//file_string é a variável global que armazena o arquivo lido
 	int bit_index = 7;
-	unsigned char bit = 0;
+	unsigned char byte = 0;
 	unsigned int aux;
 	List *temp = NULL;
+
 	while((aux = getc(source_file)) != EOF){
 		//Começa a partir do primeiro elemento da lista na huff_table na posição do char lido na string
 		temp = ht->table[aux]->first;
 		while(temp != NULL){
 			if(bit_index == -1){
-				fprintf(file, "%c", bit);
-				bit = 0;
+				fprintf(file, "%c", byte);
+				byte = 0;
 				bit_index = 7;
 			}
 			if(temp->bit == '1'){
-				bit = set_bit(bit, bit_index);
+				byte = set_bit(byte, bit_index);
 			}
 			bit_index--;
 			temp = temp->Next;
 		}
 	}
 	if(bit_index <= 7){
-		fprintf(file, "%c", bit);
+		fprintf(file, "%c", byte);
 	}
 	bit_index++;
+	//retorna o tamanho do lixo
 	return bit_index;
 }
 
@@ -132,13 +132,18 @@ void compress(char *dest_file_name, Huff_table *huff_table, Node* huffman_tree, 
 	FILE* dest_file = fopen(dest_file_name, "wb+");
 	FILE* source_file = fopen(source_file_name, "rb");
 	if(dest_file == NULL){
-		printf("Erro ao abrir arquivo de destino para escrita\n");
+		printf("Erro ao abrir arquivo de destino para escrita.\n");
+		return;
+	}
+	if(source_file == NULL){
+		printf("Erro ao abrir arquivo de entrada para leitura.\n");
 		return;
 	}
 	printf("\n");
 	print_header(dest_file, huffman_tree);
-	print_huff_tree(huffman_tree);
-	unsigned int size_trash = write_file_codification(huff_table, dest_file, size_huff_tree(huffman_tree), source_file);
+	DEBUG print_huff_tree(huffman_tree);
+	unsigned int size_trash = write_file_codification(huff_table,
+													dest_file, size_huff_tree(huffman_tree), source_file);
 
 	print_trash_header(size_trash, dest_file);
 }

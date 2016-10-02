@@ -24,6 +24,12 @@ void print_trash_header(unsigned int size, FILE* file);
 // imprime o header do huffman
 int print_header(FILE* file, Node* huff);
 
+/* RECEBE a huff_table, o arquivo destino .huff,
+ * o tamanho da árvore e o arquivo de entrada
+ * RETORNA o tamanho do lixo 
+ */
 int write_file_codification(Huff_table *ht, FILE *file, int size_tree, FILE *source_file);
 
+// RECEBE o nome do arquivo destino, a tabela de huffman,
+// a arvore de huffman e o nome do arquivo de entrada
 void compress(char *dest_file_name, Huff_table *huff_table, Node* huffman_tree, char* source_file_name);

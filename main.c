@@ -95,7 +95,7 @@ int main(int argc, char* args[]){
 
 		compress(dest_file_name, huffman_table, huffman_tree, source_file_name);
 		end = clock();
-		time_taken = ((double) (end - start)) / CLOCKS_PER_SEC;
+		time_taken = ((float) (end - start)) / CLOCKS_PER_SEC;
 		printf("\n\nCompression finished :)\n\nTime for compression: %.3f s", time_taken);
 	}
 	else{
