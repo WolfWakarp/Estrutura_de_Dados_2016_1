@@ -1,7 +1,7 @@
 #include "queue_and_tree.h"
 #include "rep_table.h"
 
-extern int FreqCounter[256];
+extern int freq_counter[256];
 
 //conta a quantidade de repetição de cada caractere
 void count_rep(char *fileName);

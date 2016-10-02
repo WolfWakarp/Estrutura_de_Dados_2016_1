@@ -48,8 +48,7 @@ void print_trash_header(unsigned int size, FILE* file){
 	fseek(file, 0, SEEK_SET);
 
 	unsigned char first_byte = getc(file);
-
-	print_binary(first_byte);
+	
 	unsigned char w = 0;
 
 	w =  (first_byte | (size << 5));
