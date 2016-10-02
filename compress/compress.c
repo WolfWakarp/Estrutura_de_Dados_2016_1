@@ -1,33 +1,23 @@
 #include "compress.h"
 
-int FreqCounter[256] = {0};
-unsigned char *file_string;
+int freq_counter[256] = {0};
 
 void count_rep(char *file_name){
 	FILE *file = fopen(file_name, "rb");
 
 	unsigned int c; //auxiliar para guardar o caractere
 	if(file == NULL) printf("Empty File!\n");
-	else{
+	else {
 		while((c=getc(file)) != EOF){
-			    //if(c == EOF) break; //encerrar caso o arquivo esteja no fim
-			    FreqCounter[c]+=1; //caso contr�rio adiciona 1 para a contagem daquele caracetere
+			    freq_counter[c]++; //adiciona 1 para a contagem daquele caracetere
 		}
 	}
 	fclose(file);
 }
 
-void printFrequency(int array[256]){
-	int i;
-	for(i = 0; i < 256; i++){
-		if(array[i] > 0) {
-		      printf("char %c: %d times\n", i, array[i]);
-		}
-	}
-}
-
 int size_huff_tree(Node* huff){
 	if(huff == NULL) return 0;
+	//chama recursivamente os filhos incrementando a cada recursão
 	return (size_huff_tree(huff->m_right)) + (size_huff_tree(huff->m_left)) + 1;
 }
 

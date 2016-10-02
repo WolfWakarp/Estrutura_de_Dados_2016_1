@@ -17,19 +17,22 @@ int main(int argc, char* args[]){
 	char *source_file_name = args[2];
 	char *dest_file_name;
 
+	//pra pegar o tamanho do arquivo
 	struct stat st;
-
+	//se for igual a 0 significa que ele não conseguiu abrir o arquivo
 	if (stat(source_file_name, &st) != 0) {
-	   return EXIT_FAILURE;
+		printf("Incapaz de ler. (Arquivo inexistente ou não tem permissão para ler)\n");
+		return EXIT_FAILURE;
 	}
 
+	//se for < 1 eh 0, significa que o arquivo é vazio
 	if(st.st_size < 1){
         printf("Arquivo vazio\n");
         exit(1);
  	}
 
 	if(args[1][0] != 'c' && args[1][0] != 'd'){
-		printf("parametro incorreto\n");
+		printf("parametro incorreto. c para comprimir e d para descomprimir\n");
 		printf("uso: %s [c]omprimir|[d]escomprimir nome_arquivo [arquivo_saida]\n", args[0]);
 		exit(1);
 	}
@@ -40,17 +43,18 @@ int main(int argc, char* args[]){
 			printf("arquivo de destino precisa ter extensao .huff\n");
 			exit(0);
 		}
-	}else if(argc == 4 && args[1][0] == 'd'){
+	} else if(argc == 4 && args[1][0] == 'd'){
 		dest_file_name = args[3];
-	}else if(args[1][0] == 'd'){
+	} else if(args[1][0] == 'd'){
 		dest_file_name = (char *) malloc(sizeof(char *) * strlen(args[2]));
 		if(!remove_huff_extension(dest_file_name, source_file_name, strlen(args[2]))){
 			printf("arquivo fornecido nao possui extensao .huff\n");
 			exit(1);
 		}
-	}else if(args[1][0] == 'c'){
+	} else if(args[1][0] == 'c'){
 		dest_file_name = (char *) malloc(sizeof(char *) * (strlen(args[2])+5));
 		strcpy(dest_file_name, source_file_name);
+		//para botar o .huff no final
 		dest_file_name[strlen(source_file_name)] = '.';
 		dest_file_name[strlen(source_file_name)+1] = 'h';
 		dest_file_name[strlen(source_file_name)+2] = 'u';
@@ -75,8 +79,8 @@ int main(int argc, char* args[]){
 		int i;
 		//Inserindo todos os elementos que aparecem pelo menos uma vez na fila de prioridade
 		for(i = 0; i < 256; i++){
-			if(FreqCounter[i] > 0) {
-				p_queue = insert(p_queue, i, FreqCounter[i]);
+			if(freq_counter[i] > 0) {
+				p_queue = insert(p_queue, i, freq_counter[i]);
 			}
 		}
 

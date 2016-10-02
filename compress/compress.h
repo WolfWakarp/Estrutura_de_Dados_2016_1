@@ -9,7 +9,7 @@ void count_rep(char *fileName);
 //imprime a frequência de cada caractere
 void printFrequency(int array[256]);
 
-//retorna o tamanho da árvore
+//RECEBE: a arvore RETORNA o tamanho da árvore
 int size_huff_tree(Node* huff);
 
 //conta a quantidade de caracteres de escape (para incrementar o tamanho da árvore)

@@ -5,7 +5,7 @@ Node* create_priority_queue(){
 }
 
 int is_empty(Node *node){
-	return ((node == NULL) ? 1 : 0);
+	return (node == NULL);
 }
 
 //chamada na main.c
@@ -22,7 +22,9 @@ Node* insert(Node *queue, unsigned char data, int frequency){
 }
 
 Node *insert_node(Node *queue, Node *inserted){
-	if(queue == inserted){
+  //quando a função merge_nodes chama essa função chega uma hora
+  //que queue e
+  if(queue == inserted){
 		inserted->Next = NULL;
 		return inserted;
 	}
@@ -93,8 +95,6 @@ Node *convert_list_to_tree(Node *list){
 		//até acabar a lista ele vai dando merge
 		while(list->Next != NULL){
 				list = merge_nodes(list);
-				DEBUG printf("\nLista na convert to tree:\n");
-				DEBUG print_priority_queue(list);
 			}
 	}
 	return list;

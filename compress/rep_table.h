@@ -34,7 +34,8 @@ Huff_table* create_huff_table();
  * e HT, que é a tabela de huffman.
  * APÓS O FIM DA FUNÇÃO, a tabela de huffman passada como parâmetro estará pronta.
  */
-void build_representations(Node *tree, unsigned char *bit_string, int index, unsigned char bit, Huff_table *ht);
+void build_representations(Node *tree, unsigned char *bit_string,
+                          int index, unsigned char bit, Huff_table *ht);
 
 /* CHAMADA NA build_representations
  * Insere no final da lista
