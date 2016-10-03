@@ -22,7 +22,7 @@ int is_empty(Stack *stack);
 
 int is_empty(Stack *stack)
 {
-	return(stack != NULL && stack->index <= 0);
+	return(stack == NULL || stack->index < 0);
 }
 
 Stack* create_stack()
@@ -48,7 +48,7 @@ int peek(Stack *stack)
 	else
 	{
 		printf("está vazia\n");
-		return;
+		return -1;
 	}
 }
 int pop(Stack *stack)
