@@ -45,7 +45,7 @@ int count_escapes(Node* huff, int escapes){
 }
 
 void print_trash_header(unsigned int size, FILE* file){
-	//volta pra pos do byte 0arquivo
+	//volta pra pos do byte 0 no arquivo
 	fseek(file, 0, SEEK_SET); //SEEK_SET faz comecar do inicio do arquivo
 
 	unsigned char first_byte = getc(file);
@@ -62,6 +62,7 @@ int print_header(FILE* dest_file, Node* huff){
 		printf("Erro ao abrir arquivo.\n");
 		return -1;
 	}
+	//o tamanho da árvore será o tamanho lido + a quantidade de escapes
 	unsigned int size_tree = count_escapes(huff, 0) + size_huff_tree(huff);
 
 	//Note que:
@@ -73,22 +74,13 @@ int print_header(FILE* dest_file, Node* huff){
 		return -1;
 	}
 
-	//posteriormente será colocado o trash_size
-	unsigned char trash_size = 0;
+	//o trash_size so sera atualizado posteriormente
 
 	//dividindo o tree_size em dois bytes
 	//como sei que o máximo será 13bits (8191 em decimal)
 	//posso utitlizar operações shift para pegar os 8 bit de cada lado
 	unsigned char first_byte = (size_tree >> 8);
 	unsigned char second_byte = size_tree;
-
-	//como o número máximo da trash será composto por 3 bits, desloco eles 5 vezes
-	//para obter 5 espaços sobrando: exemplo
-	// 0000 0101 << 5 = 1010 0000
-	//assim quando é feita a operação OR, preenche os 5 ultimos com os 5 primeiros da size tree
-	trash_size = trash_size << 5;
-
-	first_byte = (first_byte | trash_size);
 
 	fprintf(dest_file, "%c", first_byte);
 	fprintf(dest_file, "%c", second_byte);
@@ -105,7 +97,7 @@ int write_file_codification(Huff_table *ht, FILE *file, int size_tree, FILE *sou
 	List *temp = NULL;
 
 	while((aux = getc(source_file)) != EOF){
-		//Começa a partir do primeiro elemento da lista na huff_table na posição do char lido na string
+		//Começa a partir do primeiro elemento da lista na huff_table na posição do char lido no arquivo
 		temp = ht->table[aux]->first;
 		while(temp != NULL){
 			if(bit_index == -1){
@@ -120,6 +112,7 @@ int write_file_codification(Huff_table *ht, FILE *file, int size_tree, FILE *sou
 			temp = temp->Next;
 		}
 	}
+	
 	if(bit_index <= 7){
 		fprintf(file, "%c", byte);
 	}
