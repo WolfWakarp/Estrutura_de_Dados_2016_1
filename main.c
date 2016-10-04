@@ -63,7 +63,7 @@ int main(int argc, char* args[]){
 		count_rep(source_file_name);
 
 		//Fila de prioridade que vai gerar a árvore de huffman
-		Node* p_queue = create_priority_queue();
+		Node* p_queue = create_empty_priority_queue();
 		//Arvore de huffman
 		Node* huffman_tree = create_empty_tree();
 		//Tabela de huffman, que guarda a cod de cada char
@@ -74,7 +74,7 @@ int main(int argc, char* args[]){
 	    //Inserindo todos os elementos que aparecem pelo menos uma vez na fila de prioridade
 	    for(i = 0; i < 256; i++){
 		    if(freq_counter[i] > 0){
-			    p_queue = insert(p_queue, i, freq_counter[i]);
+			    p_queue = insert_pq(p_queue, i, freq_counter[i]);
 		    }
 	    }		
 

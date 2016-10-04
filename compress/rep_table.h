@@ -42,7 +42,7 @@ void build_representations(Node *tree, unsigned char *bit_string,
  * RECEBE: FIRST, que é a cabeça da lista; e BIT, que é o char a ser inserido.
  * RETORNA: a cabeça da lista
  */
-List* insert_in_list(List *first, unsigned char bit);
+List* insert_list(List *first, unsigned char bit);
 
 /* RECEBE: a tabela de huffman HT
  * Vê quais posições da tabela de huffman não estão nulos e imprime

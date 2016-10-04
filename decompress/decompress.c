@@ -1,6 +1,6 @@
 #include "decompress.h"
 
-Node* create(char value, Node* left, Node* right){
+Node* create_node(char value, Node* left, Node* right){
 	Node* new_node = (Node*) malloc(sizeof(Node));
 	new_node->m_data = value;
 	new_node->m_left = left;
@@ -13,18 +13,18 @@ Node* rebuild_tree(char* s, int* pos){
 		*pos = *pos+1;
 		Node* left = rebuild_tree(s, pos);
 		*pos = *pos+1;
-		return create('*', left, rebuild_tree(s, pos));
+		return create_node('*', left, rebuild_tree(s, pos));
 	}else if(s[*pos] == '\\'){
 		*pos = *pos + 1;
-		return create(s[*pos], NULL, NULL);
+		return create_node(s[*pos], NULL, NULL);
 	}
 
-	return create(s[*pos], NULL, NULL);
+	return create_node(s[*pos], NULL, NULL);
 }
 
 int get_tree_size(FILE* file){
 	fseek(file, 0, SEEK_SET);
-
+ 
 	unsigned char first_byte = getc(file);
 	unsigned char second_byte = getc(file);
 
@@ -34,7 +34,7 @@ int get_tree_size(FILE* file){
 	first_byte = first_byte >> 3;
 
 	/*
-	depois do shift 8 integer promotion:
+	depois do shift 8 - integer promotion:
 	0000 1000 0000 0000
 	0000 0000 1100 1100
 	depois do ou:

@@ -1,6 +1,6 @@
 #include "queue_and_tree.h"
 
-Node* create_priority_queue(){
+Node* create_empty_priority_queue(){
     return NULL;
 }
 
@@ -9,7 +9,7 @@ int is_empty(Node *node){
 }
 
 //chamada na main.c
-Node* insert(Node *queue, unsigned char data, int frequency){
+Node* insert_pq(Node *queue, unsigned char data, int frequency){
   Node *newNode = (Node*) malloc(sizeof(Node));
   newNode->m_data = data;
   newNode->m_frequency = frequency;

@@ -16,13 +16,13 @@ struct node{
 };
 
 //retorna uma fila nula
-Node* create_priority_queue();
+Node* create_empty_priority_queue();
 
 //RECEBE um node e vê se ele aponta para nulo. Se sim, retorna 1. 
 int is_empty(Node *node);
 
 //Cria um node pra inserir usando o insert_node
-Node* insert(Node *queue, unsigned char data, int frequency);
+Node* insert_pq(Node *queue, unsigned char data, int frequency);
 
 //Inserção padrão de uma fila de prioridade, o node com menor frequência fica na frente
 Node *insert_node(Node *queue, Node *inserted_node);

@@ -20,7 +20,7 @@ void build_representations(Node *tree, unsigned char *bit_string, int index, uns
 
 			int i;
 			for(i = 0; i <= index; i++){
-				ht->table[tree->m_data]->first = insert_in_list(ht->table[tree->m_data]->first, bit_string[i]);
+				ht->table[tree->m_data]->first = insert_list(ht->table[tree->m_data]->first, bit_string[i]);
 			}
 			return;
 		}
@@ -33,7 +33,7 @@ void build_representations(Node *tree, unsigned char *bit_string, int index, uns
 	return;
 }
 
-List* insert_in_list(List *first, unsigned char bit){
+List* insert_list(List *first, unsigned char bit){
 	List *newNode = (List*) malloc(sizeof(List));
 	newNode->bit = bit;
 	newNode->Next = NULL;
