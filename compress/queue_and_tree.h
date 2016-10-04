@@ -5,26 +5,27 @@
 
 #define DEBUG if(0)
 
+//FILA-ARVORE
 typedef struct node Node;
 struct node{
-  unsigned char m_data;
+  unsigned char m_data; //o caractere
   int m_frequency; //prioridade, o menor fica na frente
-  Node *Next;
-  Node *m_left;
-  Node *m_right;
+  Node *Next; //Aponta para o próximo node
+  Node *m_left; //filho a esquerda
+  Node *m_right; //filho a direita
 };
 
+//retorna uma fila nula
 Node* create_priority_queue();
 
+//RECEBE um node e vê se ele aponta para nulo. Se sim, retorna 1. 
 int is_empty(Node *node);
 
-//Cria um nó pra inserir usando o insert_node
+//Cria um node pra inserir usando o insert_node
 Node* insert(Node *queue, unsigned char data, int frequency);
 
-//Inserção padrão de uma fila de prioridade, o nó com menor frequência fica na frente
+//Inserção padrão de uma fila de prioridade, o node com menor frequência fica na frente
 Node *insert_node(Node *queue, Node *inserted_node);
-
-void print_priority_queue(Node *node);
 
 /* Cria um novo node e faz com que o primeiro da fila de prioridade seja o filho
  * à esquerda e com que o segundo seja o filho à direita
@@ -35,17 +36,12 @@ Node *merge_nodes(Node* queue);
 
 void print_pre_order(Node *bt);
 
-/* RECEBE apenas a raiz da árvore
- * vai concatenando na string global tree_string
- */
-void get_pre_order_string(Node *bt);
-
 // Transforma toda a fila de prioridade feita com lista em uma �rvore de Huffman
-Node *convert_list_to_tree(Node *list);
+Node *convert_queue_to_tree(Node *queue);
 
 Node* create_empty_tree();
 
 int is_leaf(Node *tree);
 
-// imprime a àrvore de huffman
+// imprime a arvore de huffman
 void print_huff_tree(Node* huff);

@@ -132,7 +132,6 @@ void compress(char *dest_file_name, Huff_table *huff_table, Node* huffman_tree, 
 		printf("Erro ao abrir arquivo de entrada para leitura.\n");
 		return;
 	}
-	printf("\n");
 	print_header(dest_file, huffman_tree);
 	DEBUG print_huff_tree(huffman_tree);
 	unsigned int size_trash = write_file_codification(huff_table,

@@ -94,19 +94,19 @@ void decompress(char* source_file_name, char* dest_file_name){
 	DEBUG print_huff_tree(root_huff);
 	DEBUG printf("\n");
 
-	printf("Quantidade de bytes escritos: %ld\n", total_bytes);
-	printf("Tamanho da arvore: %d\n", size_tree);
-	printf("Trash size: %d\n", size_trash);
+	DEBUG printf("Quantidade de bytes escritos: %ld\n", total_bytes);
+	DEBUG printf("Tamanho da arvore: %d\n", size_tree);
+	DEBUG printf("Trash size: %d\n", size_trash);
 
 	//o tamanho da arvore + 2; ele agora vai comecar a ler o texto codificado
-	fseek(source_file, size_tree+2, SEEK_SET);
+	fseek(source_file, size_tree + 2, SEEK_SET);
 	unsigned int bit_cur = 0; //bit atual
 	Node* root_aux = root_huff;
 
-	printf("%d\n", (total_bytes-(size_tree+2)));
+	DEBUG printf("%d\n", (total_bytes - (size_tree + 2)));
 	//comecando a ir de bit em bit buscando uma folha na arvore
 	//ate (o total de bytes) - (o que eu ja li)) - (o byte de lixo)
-	for(i = 0; i < (total_bytes-(size_tree+2))-1; i++){
+	for(i = 0; i < (total_bytes - (size_tree + 2)) - 1; i++){
 		bit_cur = getc(source_file);
 		for(j = 7; j >= 0; j--){
 			if(is_bit_i_set(bit_cur, j)){

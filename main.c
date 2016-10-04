@@ -54,16 +54,9 @@ int main(int argc, char* args[]){
 	} else if(args[1][0] == 'c'){
 		dest_file_name = (char *) malloc(sizeof(char *) * (strlen(args[2])+5));
 		strcpy(dest_file_name, source_file_name);
-		//para botar o .huff no final
-		dest_file_name[strlen(source_file_name)] = '.';
-		dest_file_name[strlen(source_file_name)+1] = 'h';
-		dest_file_name[strlen(source_file_name)+2] = 'u';
-		dest_file_name[strlen(source_file_name)+3] = 'f';
-		dest_file_name[strlen(source_file_name)+4] = 'f';
-		dest_file_name[strlen(source_file_name)+5] = '\0';
+        //concatenando o .huff no nome do arquivo destino
+        strcat(dest_file_name, ".huff");
 	}
-
-	printf("%s\n", dest_file_name);
 
 	if(args[1][0] == 'c'){
 		start = clock();
@@ -76,18 +69,19 @@ int main(int argc, char* args[]){
 		//Tabela de huffman, que guarda a cod de cada char
 		Huff_table* huffman_table = create_huff_table();
 
-		int i;
-		//Inserindo todos os elementos que aparecem pelo menos uma vez na fila de prioridade
-		for(i = 0; i < 256; i++){
-			if(freq_counter[i] > 0) {
-				p_queue = insert(p_queue, i, freq_counter[i]);
-			}
-		}
+        int i;
+        //freq_counter é uma variavel global
+	    //Inserindo todos os elementos que aparecem pelo menos uma vez na fila de prioridade
+	    for(i = 0; i < 256; i++){
+		    if(freq_counter[i] > 0){
+			    p_queue = insert(p_queue, i, freq_counter[i]);
+		    }
+	    }		
 
 		//ARVORE DE HUFFMAN
-		huffman_tree = convert_list_to_tree(p_queue);
+		huffman_tree = convert_queue_to_tree(p_queue);
 
-		printf("\nTree size: %d\n", size_huff_tree(huffman_tree));
+		DEBUG printf("Tree size: %d\n", size_huff_tree(huffman_tree));
 
 		unsigned char bit_string[256];
 		build_representations(huffman_tree, bit_string, -1, '0', huffman_table);
@@ -96,14 +90,14 @@ int main(int argc, char* args[]){
 		compress(dest_file_name, huffman_table, huffman_tree, source_file_name);
 		end = clock();
 		time_taken = ((float) (end - start)) / CLOCKS_PER_SEC;
-		printf("\n\nCompression finished :)\n\nTime for compression: %.3f s", time_taken);
+		printf("\nCompression finished :)\nTime for compression: %.3f s\n\n", time_taken);
 	}
 	else{
 		start = clock();
 		decompress(source_file_name, dest_file_name);
 		end = clock();
 		time_taken = ((double) (end - start)) / CLOCKS_PER_SEC;
-		printf("\n\nDecompression finished :)\n\nTime for decompression: %.3f s", time_taken);
+		printf("\nDecompression finished :)\nTime for decompression: %.3f s\n\n", time_taken);
 	}
 
 	return 0;

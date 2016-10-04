@@ -44,15 +44,6 @@ Node *insert_node(Node *queue, Node *inserted){
 	}
 }
 
-void print_priority_queue(Node *node){
-	Node *temp;
-	if(node == NULL)
-		printf("\nFila de prioridade vazia!\n");
-	for(temp = node; temp != NULL; temp = temp->Next){
-		printf("Char: %c  Rep: %d | ", temp->m_data, temp->m_frequency);
-	}
-}
-
 Node *merge_nodes(Node* queue){
 	//criando o node e definindo seus filhos
 	Node *newNode = (Node*) malloc(sizeof(Node));
@@ -78,26 +69,26 @@ Node *merge_nodes(Node* queue){
 	return queue;
 }
 
-Node *convert_list_to_tree(Node *list){
-	//caso a lista só tenha um elemento
-	if(list->Next == NULL){
+Node *convert_queue_to_tree(Node *queue){
+	//caso a fila só tenha um elemento
+	if(queue->Next == NULL){
 		Node *newNode = (Node*) malloc(sizeof(Node));
-		newNode->m_left = list;
+		newNode->m_left = queue;
 		newNode->m_right = NULL;
 		//não precisa definir os netos como null pois eles
 		//já são nulos pela inserção na priority queue
 		newNode->m_data = '*';
 		//a freq desse node vai ser apenas o node da lista
-		newNode->m_frequency = list->m_frequency;
-		list = newNode;
+		newNode->m_frequency = queue->m_frequency;
+		queue = newNode;
 	}
 	else{ //caso a fila tenha dois ao mais elementos
 		//até acabar a lista ele vai dando merge
-		while(list->Next != NULL){
-				list = merge_nodes(list);
+		while(queue->Next != NULL){
+				queue = merge_nodes(queue);
 			}
 	}
-	return list;
+	return queue;
 }
 
 Node* create_empty_tree() {
