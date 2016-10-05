@@ -6,7 +6,7 @@
 Node* create_node(char value, Node* left, Node* right);
 
 // reconstroi a árvore de huffman a partir da árvore em pre-order lida no .huff
-Node* rebuild_tree(char* s, int* pos);
+Node* rebuild_tree(char* str_tree, int* pos);
 
 //pega o tamanho da árvore lendo o .huff
 int get_tree_size(FILE* file);

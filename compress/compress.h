@@ -20,7 +20,7 @@ void print_tree_header(FILE* file, Node* huff);
 int count_escapes(Node* huff, int escapes);
 
 // imprime o lixo no header do huffman
-void print_trash_header(unsigned int size, FILE* file);
+void print_trash_header(unsigned int trash_size, FILE* file);
 
 // RECEBE o arquivo de destino .huff e a raiz da arvore de huffman
 int print_header(FILE* file, Node* huff);

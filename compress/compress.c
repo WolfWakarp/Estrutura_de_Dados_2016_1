@@ -44,14 +44,14 @@ int count_escapes(Node* huff, int escapes){
   return escapes;
 }
 
-void print_trash_header(unsigned int size, FILE* file){
+void print_trash_header(unsigned int trash_size, FILE* file){
 	//volta pra pos do byte 0 no arquivo
 	fseek(file, 0, SEEK_SET); //SEEK_SET faz comecar do inicio do arquivo
 
 	unsigned char first_byte = getc(file);
 	unsigned char new_first_byte = 0;
 
-	new_first_byte = (first_byte | (size << 5));
+	new_first_byte = (first_byte | (trash_size << 5));
 
 	fseek(file, 0, SEEK_SET);
 	fprintf(file, "%c", new_first_byte);
@@ -112,7 +112,7 @@ int write_file_codification(Huff_table *ht, FILE *file, int size_tree, FILE *sou
 			temp = temp->Next;
 		}
 	}
-	
+
 	if(bit_index <= 7){
 		fprintf(file, "%c", byte);
 	}

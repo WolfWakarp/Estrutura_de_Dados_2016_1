@@ -54,8 +54,8 @@ int main(int argc, char* args[]){
 	} else if(args[1][0] == 'c'){
 		dest_file_name = (char *) malloc(sizeof(char *) * (strlen(args[2])+5));
 		strcpy(dest_file_name, source_file_name);
-        //concatenando o .huff no nome do arquivo destino
-        strcat(dest_file_name, ".huff");
+    //concatenando o .huff no nome do arquivo destino
+    strcat(dest_file_name, ".huff");
 	}
 
 	if(args[1][0] == 'c'){
@@ -69,21 +69,21 @@ int main(int argc, char* args[]){
 		//Tabela de huffman, que guarda a cod de cada char
 		Huff_table* huffman_table = create_huff_table();
 
-        int i;
-        //freq_counter é uma variavel global
+      int i;
+      //freq_counter é uma variavel global
 	    //Inserindo todos os elementos que aparecem pelo menos uma vez na fila de prioridade
 	    for(i = 0; i < 256; i++){
 		    if(freq_counter[i] > 0){
 			    p_queue = insert_pq(p_queue, i, freq_counter[i]);
 		    }
-	    }		
+	    }
 
 		//ARVORE DE HUFFMAN
 		huffman_tree = convert_queue_to_tree(p_queue);
 
 		DEBUG printf("Tree size: %d\n", size_huff_tree(huffman_tree));
 
-		unsigned char bit_string[256];
+		unsigned char bit_string[255];
 		build_representations(huffman_tree, bit_string, -1, '0', huffman_table);
 		DEBUG print_all_reps(huffman_table);
 
