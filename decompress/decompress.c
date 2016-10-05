@@ -76,8 +76,8 @@ void decompress(char* source_file_name, char* dest_file_name){
 	int size_tree = get_tree_size(source_file);
 	int size_trash = get_trash_size(source_file);
 
-	//vai armazenar a arvore
-	char str_tree[size_tree];
+	//vai armazenar a arvore, o +1 é para guardar o /0
+	char str_tree[size_tree + 1];
 
 	//comeca no 2 pois eu ja li os dois primeiros bytes
 	//agora eu quero ler a arvore
