@@ -1,8 +1,3 @@
-/*
-	ADT para BST
-	@author Dayvson Sales
-*/
-
 #include <stdlib.h>
 #include <string.h>
 
