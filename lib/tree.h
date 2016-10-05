@@ -165,23 +165,6 @@ void bst_print(bt* bst){
 	printf(")");
 }
 
-int bst_to_string(bt* bst, char* s, int pos){
-	s[pos] = '(';
-	if(bst != NULL){
-		char aux[100];
-		snprintf(aux, sizeof(aux), "%d", bst->value);
-		int i;
-		for(i = 0; i < strlen(aux); i++){
-			pos++;
-			s[pos] = aux[i];
-		}
-		pos = bst_to_string(bst->left, s, pos+1);
-		pos = bst_to_string(bst->right, s, pos+1);
-	}
-	s[pos+1] = ')';
-	return pos+1;
-}
-
 int max(int a, int b){
 	return ((a > b) ? a : b);
 }
