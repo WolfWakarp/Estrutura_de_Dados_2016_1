@@ -81,7 +81,6 @@ int main(int argc, char *argv[]){
 		bst = bst_insert(bst, sorted, 0);
 		avl = bst_insert(avl, sorted, 1);
 	}
-	avl = balance_everything(avl);
 
 	if(DEBUG){ bst_print(avl); printf("\n"); }
 	if(DEBUG){ bst_print(bst); printf("\n"); }
