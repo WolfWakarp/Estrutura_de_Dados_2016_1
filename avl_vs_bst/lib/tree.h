@@ -46,9 +46,6 @@ int balance_factor(bt* bst);
 /* Rotacionar a arvore */
 bt* bst_rotate_left(bt* bst);
 
-/*voce manda uma binaria completa e volta uma avl*/
-bt* balance_everything(bt * bst);
-
 bt* bst_rotate_right(bt* bst);
 
 bt* create_empty_tree(){
