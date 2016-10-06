@@ -16,3 +16,10 @@ Cada pasta deste repositório contém um dos módulos do projeto da disciplina. 
 - Compressor e descompressor de arquivos usando o algoritmo de Huffman  
 - Seminário sobre árvores Red-Black  
 - Testes unitários de alguma estrutura usando a biblioteca CUnit  
+  
+  
+**Repositórios Originais**  
+https://github.com/victoraccete/Estrutura_de_Dados_2016_1.git  
+https://github.com/ellju/Red-Black-Tree.git  
+https://github.com/dayvsonsales/avl_vs_bst.git  
+https://github.com/carlospinheirof/Cunit_test.git
