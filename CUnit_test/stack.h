@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-/* Estrutura de dados pilha com array Autor Carlos Pinheiro */
 
 struct _Stack 
 {
@@ -57,6 +56,6 @@ int pop(Stack *stack)
 	else
 	{
 		printf("está vazia\n");
-		return -987984;
+		return -1;
 	}
 }
