@@ -15,11 +15,4 @@ Cada pasta deste repositório contém um dos módulos do projeto da disciplina. 
 - Contagem e plotagem comparando duas estruturas de dados vistas em sala de aula (AVS vs. BST desbalanceada)  
 - Compressor e descompressor de arquivos usando o algoritmo de Huffman  
 - Seminário sobre árvores Red-Black  
-- Testes unitários de alguma estrutura usando a biblioteca CUnit  
-  
-  
-**Repositórios Originais ao final do projeto**  
-https://github.com/victoraccete/Huffman-Coding_c.git   
-https://github.com/ellju/Red-Black-Tree.git  
-https://github.com/dayvsonsales/avl_vs_bst.git  
-https://github.com/carlospinheirof/Cunit_test.git
+- Testes unitários de alguma estrutura vista em sala usando a biblioteca CUnit  
