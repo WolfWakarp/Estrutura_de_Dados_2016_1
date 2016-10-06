@@ -1,0 +1,34 @@
+(4(2(1()())(3()()))(8(6(5()())(7()()))(9()(10()()))))
+(1()(2()(3()(4()(5()(6()(7()(8()(9()(10()()))))))))))
+Numero sorteado: 4
+Comparacoes na AVL: 1
+Comparacoes na BST: 4
+Numero sorteado: 3
+Comparacoes na AVL: 3
+Comparacoes na BST: 3
+Numero sorteado: 9
+Comparacoes na AVL: 3
+Comparacoes na BST: 9
+Numero sorteado: 7
+Comparacoes na AVL: 4
+Comparacoes na BST: 7
+Numero sorteado: 5
+Comparacoes na AVL: 4
+Comparacoes na BST: 5
+Numero sorteado: 10
+Comparacoes na AVL: 4
+Comparacoes na BST: 10
+Numero sorteado: 6
+Comparacoes na AVL: 3
+Comparacoes na BST: 6
+Numero sorteado: 2
+Comparacoes na AVL: 2
+Comparacoes na BST: 2
+Numero sorteado: 1
+Comparacoes na AVL: 3
+Comparacoes na BST: 1
+Numero sorteado: 8
+Comparacoes na AVL: 2
+Comparacoes na BST: 8
+Success
+arquivo gerado com sucesso
