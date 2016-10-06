@@ -39,7 +39,7 @@ int clean_test()
    	pop(stack);
    }
    free(stack);
-   return 0;
+   return 1;
 }
 
 int main()
